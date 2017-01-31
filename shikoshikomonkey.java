@@ -5,9 +5,6 @@ class ex{
         for(int i = 0;i <= 10;i++){
             System.out.println("‚«‚½‚È‚­‚È‚¢");
         }
-        int a= 1;
-        while(a == 0){
-            System.out.println("‚«‚½‚È‚¢");        	
-        }
+    	System.out.println("lol");
     }
 }
