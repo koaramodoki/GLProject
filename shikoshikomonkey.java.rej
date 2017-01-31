@@ -1,0 +1,9 @@
+diff a/shikoshikomonkey.java b/shikoshikomonkey.java	(rejected hunks)
+@@ -7,6 +7,7 @@
+         }
+     	System.out.println("lol");
+ 
++<<<<<<< HEAD
+     	//�r�����Ă邭����
+     	int a=1;
+     	while(a == 1){
