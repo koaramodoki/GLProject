@@ -6,5 +6,10 @@ class ex{
             System.out.println("‚«‚½‚È‚­‚È‚¢");
         }
     	System.out.println("lol");
+
+    	int a=1;
+    	while(a == 1){
+    		System.out.println("‚«‚½‚È‚¢");
+    	}
     }
 }
