@@ -7,8 +7,6 @@ class ex{
         }
     	System.out.println("lol");
 
-
-    	//”rŸ•‚µ‚Ä‚é‚­‚¹‚É
     	int a=1;
     	while(a == 1){
 
