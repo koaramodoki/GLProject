@@ -7,9 +7,6 @@ class ex{
         }
     	System.out.println("lol");
 
-    	int a=1;
-    	while(a == 1){
-
     	int a = 0;
     	while(a < 20){
     		a++;
