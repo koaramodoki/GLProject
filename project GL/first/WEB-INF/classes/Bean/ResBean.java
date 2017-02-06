@@ -17,7 +17,7 @@ public class ResBean{
 		return resUserName;
 	}
 	public String getResCreateDate(){
-		return resDate;
+		return resCreateDate;
 	}
 	public String getResContent(){
 		return resContent;
