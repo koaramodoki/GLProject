@@ -7,9 +7,9 @@ public class ResBean{
 	private String resContent;
 	private int resDeleteFlag;
 	private int resStamp;
-	
+
 	public ResBean(){}
-	
+
 	public int getResId(){
 		return resId;
 	}
@@ -28,7 +28,7 @@ public class ResBean{
 	public int getResStamp(){
 		return resStamp;
 	}
-	
+
 	public void setResId(int resId){
 		this.resId=resId;
 	}
