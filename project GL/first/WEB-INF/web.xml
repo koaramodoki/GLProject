@@ -2,4 +2,41 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 		version="2.4">
+
+
+
+	<servlet>
+		<servlet-name>AAA</servlet-name>
+		<jsp-file>/AAA.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AAA</servlet-name>
+		<url-pattern>/AAA</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BBB</servlet-name>
+		<jsp-file>/BBB.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BBB</servlet-name>
+		<url-pattern>/BBB</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>testServlet</servlet-name>
+		<servlet-class>testServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>testServlet</servlet-name>
+		<url-pattern>/testServlet</url-pattern>
+	</servlet-mapping>
+
+
+
 </web-app>
+
+
