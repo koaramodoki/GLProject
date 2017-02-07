@@ -12,7 +12,7 @@
 			height:80px;
 		}
 		#res_content{
-			width:380px;
+			width:480px;
 		}
 		#res_id{
 			font-size: 9px;
@@ -47,7 +47,7 @@
 		<table border="1">
 			<c:forEach var="user" items="${users}">
 				<tr>
-					<td colspan="3" valign="top">${Res.resId}</td>
+					<td>${Res.resId}</td>
 					<td>${user.resUserName}</td><td id="resid">${user.resId}</td>
 				</tr>
 				<tr><td id="res_content">${Res.Content}</td></tr>
