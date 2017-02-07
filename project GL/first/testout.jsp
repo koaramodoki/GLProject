@@ -25,6 +25,9 @@
 			font-size: 11px;
 			color: #333;
 		}
+		#res_name{
+			width:254px;
+		}
 	</style>
 </head>
 <body>
@@ -32,7 +35,7 @@
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
-				<tr><td>名前</td><td><input type="text" name="User"></td></tr>
+				<tr><td>名前</td><td><input type="text" name="User" id="res_name"></td></tr>
 				<tr><td colspan="2">投稿内容</td></tr>
 				<tr><td colspan="2">
 					<input id="textbox" type='text' name='Content' valign="top">
@@ -44,8 +47,13 @@
 					<input type="checkbox" name="stamp" value="4">
 					<input type="checkbox" name="stamp" value="5">
 				</td></tr>
-				<tr><td align="right"><input type="submit" value="送信 "></td></tr>
+				<tr><td align="right" colspan="2"><input type="submit" value="送信 "></td></tr>
+				<form>
 			</table>
+		</form>
+		<form method='post' action='dbatestservlet'>
+		<div id="disp" style="visibility:hidden"><input type='text' name='Content'></div>
+			<input type="submit" value="更新 ">
 		</form>
 	</div>
 
