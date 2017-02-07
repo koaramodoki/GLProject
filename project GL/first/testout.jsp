@@ -33,7 +33,7 @@
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
-				<tr><td>ID</td><td><input type="text" name="Id"></td></tr>
+<!--			<tr><td>ID</td><td><input type="text" name="Id"></td></tr>-->
 				<tr><td>–¼‘O</td><td><input type="text" name="User"></td></tr>
 				<tr><td colspan="2">“Še“à—e</td></tr>
 				<tr><td colspan="2">
@@ -53,12 +53,13 @@
 
 
 			<c:forEach var="user" items="${users}">
-				<div id="res">
-					<a>${user.resUserName}</a><a id="resid">${user.resId}</a><br>
-					<a id="res_content">${user.resContent}</a><br>
-					<a align="right" id="res_createdate">${user.resCreateDate}</a><br>
-					<hr>
-				</div>
+				<table id="res">
+					<tr><td>${user.resUserName}</td><td id="resid">${user.resId}</td></tr>
+					<tr><td id="res_content" rowspan="2">${user.resContent}</td></tr>
+					<tr><td align="right" id="res_createdate" rowspan="2">
+						${user.resCreateDate}</td></tr>
+				</table>
+				<hr>
 				</c:forEach>
 		</table>
 
