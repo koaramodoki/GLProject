@@ -54,9 +54,9 @@
 
 			<c:forEach var="user" items="${users}">
 				<div id="res">
-					<p>${user.resUserName}</p><p id="resid">${user.resId}</p><br>
-					<p id="res_content">${user.resContent}</p><br>
-					<p  align="right" id="res_createdate">${user.resCreateDate}</p><br>
+					<a>${user.resUserName}</a><a id="resid">${user.resId}</a><br>
+					<a id="res_content">${user.resContent}</a><br>
+					<a align="right" id="res_createdate">${user.resCreateDate}</a><br>
 					<hr>
 				</div>
 				</c:forEach>
