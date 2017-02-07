@@ -35,7 +35,7 @@ public class ResBean{
 	public void setResUserName(String resUserName){
 		this.resUserName=resUserName;
 	}
-	public void setResCreateDate(String resDate){
+	public void setResCreateDate(String resCreateDate){
 		this.resCreateDate=resCreateDate;
 	}
 	public void setResContent(String resContent){
