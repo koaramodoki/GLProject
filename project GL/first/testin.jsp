@@ -8,6 +8,9 @@
 <body>
 
 	<form method='post' action='dbatestservlet'>
+		id<input type="text" name='Id'><br>
+		–¼‘O<input type="text" name='User'><br>
+		–{•¶<input type="text" name='Content'><br>
 	<input type='submit' value='‘—M'>
 	</form>
 

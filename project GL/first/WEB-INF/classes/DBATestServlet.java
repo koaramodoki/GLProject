@@ -22,8 +22,13 @@ public class DBATestServlet extends HttpServlet{
 		//文字コード設定
 		req.setCharacterEncoding("Windows-31J");
 		
+		ResBean rb = new ResBean();
+		rb.setResId(Integer.parseInt(req.getParameter("Id")));
+		rb.setResUserName(req.getParameter("User"));
+		rb.setResContent(req.getParameter("Content"));
+		
 		DBAccess dba = new DBAccess();
-		dba.getConnection();
+		dba.write(rb);
 		users = dba.read();
 		
 		//HttpServletRequetの実装クラスのインスタンスに

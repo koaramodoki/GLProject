@@ -35,7 +35,9 @@ public class DBAccess{
 	}
 	public ArrayList read(){
 		try{			
-			String sql="SELECT EMPNO,ENAME FROM EMP";
+			getConnection();
+			
+			String sql="SELECT resId,UserName,CreateDate,Content FROM ResTest ORDER BY CreateDate DESC";
 			
 			Statement st=cn.createStatement();
 			
@@ -46,15 +48,19 @@ public class DBAccess{
 				
 				rb.setResId(rs.getInt(1));
 				rb.setResUserName(rs.getString(2));
-				//rb.setResCreateDate(rs.getString(3));
-				//rb.setResContent(rs.getString(4));
+				rb.setResCreateDate(rs.getString(3));
+				rb.setResContent(rs.getString(4));
 				
 				resbean.add(rb);
 			}
+			System.out.println("ÉäÉXÉgÇ…í«â¡ÇµÇΩÇÊÅB");
 			
-		//}catch(ClassNotFoundException e){
-		//	e.printStackTrace();
-		//	System.out.println("ê⁄ë±é∏îs");
+			cn.commit();
+			
+			st.close();
+			
+			cn.close();
+		
 		}catch(SQLException e){
 			e.printStackTrace();
 			System.out.println("ê⁄ë±é∏îs");
@@ -65,7 +71,29 @@ public class DBAccess{
 		
 		return resbean;
 	}
-	public void write(){
-
+	public void write(ResBean rb){
+		try{
+			getConnection();
+			
+			String sql="insert into ResTest(resId,UserName,CreateDate,Content) values ("+rb.getResId()+",'"+rb.getResUserName()+"',sysdate,'"+rb.getResContent()+"')";
+			
+			Statement st=cn.createStatement();
+			
+			int a = st.executeUpdate(sql);
+			System.out.println(a+"åèinsertÇµÇΩÇÊÅB");
+			
+			cn.commit();
+			
+			st.close();
+			
+			cn.close();
+			
+		}catch(SQLException e){
+			e.printStackTrace();
+			System.out.println("ê⁄ë±é∏îs");
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("ê⁄ë±é∏îs");
+		}
 	}
 }
