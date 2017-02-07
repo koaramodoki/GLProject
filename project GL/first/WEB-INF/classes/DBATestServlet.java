@@ -23,7 +23,6 @@ public class DBATestServlet extends HttpServlet{
 		req.setCharacterEncoding("Windows-31J");
 		
 		ResBean rb = new ResBean();
-		rb.setResId(Integer.parseInt(req.getParameter("Id")));
 		rb.setResUserName(req.getParameter("User"));
 		rb.setResContent(req.getParameter("Content"));
 		
