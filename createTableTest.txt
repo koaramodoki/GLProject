@@ -1,0 +1,5 @@
+Create table Restest(
+	ResId Number(7) Primary key,
+	UserName Varchar2(40) Default '‚È‚È‚µ‚Ì‚È‚Á‚¿‚á‚ñ',
+	CreateDate Date Not null,
+	Content Varchar2(4000) Not null) 
