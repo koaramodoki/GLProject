@@ -18,15 +18,11 @@
 			width:480px;
 			font-size: 16px;
 		}
-		#res_id{
-			font-size: 9px;
-			color: #333;
-		}
 		#res{
 			width: 50%;
 		}
 		#res_createdate{
-			font-size: 7px;
+			font-size: 11px;
 			color: #333;
 		}
 	</style>
@@ -36,7 +32,6 @@
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
-				<tr><td>ID</td><td><input type="text" name="Id"></td></tr>
 				<tr><td>ñºëO</td><td><input type="text" name="User"></td></tr>
 				<tr><td colspan="2">ìäçeì‡óe</td></tr>
 				<tr><td colspan="2">
@@ -57,7 +52,7 @@
 
 		<c:forEach var="user" items="${users}">
 			<table id="res">
-				<tr><td>${user.resUserName}:<a id="res_id">${user.resId}</a></td></tr>
+				<tr><td>${user.resId}:${user.resUserName}</td></tr>
 				<tr><td id="res_content" colspan="2">${user.resContent}</td></tr>
 				<tr><td align="right" id="res_createdate" colspan="2">
 					${user.resCreateDate}</td></tr>
