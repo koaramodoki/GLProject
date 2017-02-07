@@ -7,6 +7,9 @@
 <head>
 	<title>ŒfŽ¦”ÂƒeƒXƒg</title>
 	<style type="text/css">
+		body{
+			font-size: 11px;
+		}
 		#textbox{
 			width:380px;
 			height:80px;
@@ -54,7 +57,7 @@
 
 		<c:forEach var="user" items="${users}">
 			<table id="res">
-				<tr><td>${user.resUserName}</td><td id="resid">${user.resId}</td></tr>
+				<tr><td>${user.resUserName}:<a id="res_id">${user.resId}</a></td></tr>
 				<tr><td id="res_content" colspan="2">${user.resContent}</td></tr>
 				<tr><td align="right" id="res_createdate" colspan="2">
 					${user.resCreateDate}</td></tr>
