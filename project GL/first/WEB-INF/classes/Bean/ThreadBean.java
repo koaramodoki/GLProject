@@ -32,6 +32,13 @@ public class ThreadBean{
 		}
 		public void setThrCreateUser(String _CreateUser){
 			this.thrCreateUser = _CreateUser;
+
+		}
+		public String getThrCreateDate(){
+			return thrCreateDate;
+		}
+		public void setThrCreateDate(String _CreateDate){
+			this.thrCreateDate = _CreateDate;
 		}
 
 		public String getThrUpdateDate(){
