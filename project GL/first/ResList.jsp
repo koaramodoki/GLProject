@@ -28,7 +28,9 @@
 			</table>
 		</form>
 	</div>
+
 <hr><br>
+
 	<table border="0">
 		<c:forEach var="Res" items="${_Res}">
 			<tr>
