@@ -34,7 +34,39 @@
 		<servlet-name>testServlet</servlet-name>
 		<url-pattern>/testServlet</url-pattern>
 	</servlet-mapping>
+	
 
+
+	<servlet>
+		<servlet-name>testin</servlet-name>
+		<jsp-file>/testin.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>testin</servlet-name>
+		<url-pattern>/testin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>dbatestservlet</servlet-name>
+		<servlet-class>DBATestServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dbatestservlet</servlet-name>
+		<url-pattern>/dbatestservlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>testout</servlet-name>
+		<jsp-file>/testout.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>testout</servlet-name>
+		<url-pattern>/testout</url-pattern>
+	</servlet-mapping>
+	
 
 
 </web-app>
