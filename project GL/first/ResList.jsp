@@ -1,7 +1,11 @@
+<%@ page pageEncoding="Windows-31J"
+	contentType="text/html;charset=Windows-31J" %>
+<%@ taglib prefix="c" uri="http://java.sun.con/"%>
+
+<!DOCTYPE html>
 <html>
 <head>
-	<title>ResList</title>
-</head>
+	<title>res List</title>
 	<style type="text/css">
 		#textbox{
 			width:380px;
@@ -10,14 +14,22 @@
 		#res_content{
 			width:380px;
 		}
+		#res_id{
+			font-size: 9px;
+			color: #333;
+		}
 	</style>
+</head>
 <body>
+
 	<div>
-		<form method='post' action=''>
+		<form method='post' action='dbatestservlet'>
 			<table>
-				<tr><td>投稿内容</td></tr>
+				<tr><td>ID</td><td><input type="text" name="id"></td></tr>
+				<tr><td>名前</td><td><input type="text" name="User"></td></tr>
+				<tr><td colspan="2">投稿内容</td></tr>
 				<tr><td>
-					<input id="textbox" type='text' name='name' valign="top">
+					<input id="text" type='text' name='Content' valign="top">
 				</td></tr>
 				<tr><td>
 					<input type="checkbox" name="stamp" value="1">
@@ -31,16 +43,17 @@
 		</form>
 	</div>
 
-<hr><br>
 
-		<table border="0">
+		<table border="1">
+			<c:forEach var="user" items="${users}">
 				<tr>
-					<td rowspan="3" valign="top">${Res.resId}</th>
-					<td>${Res.resUserName}</td>
+					<td colspan="3" valign="top">${Res.resId}</td>
+					<td>${user.resUserName}</td><td id="resid">${user.resId}</td>
 				</tr>
 				<tr><td id="res_content">${Res.Content}</td></tr>
-				<tr><td align="right">${Res.CreateDate}</td></tr>
-				<tr><td></td></tr>
+				<tr><td  align="right">${user.resCreateDate}</td></tr>
 			</c:forEach>
 		</table>
 
+</body>
+</html>
