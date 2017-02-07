@@ -4,14 +4,14 @@
 <head><title>結果</title></head>
 <body>
 
-<>
-・${JJJ.resId}<br>
-・${JJJ.resUserName}<br>
-・${JJJ.resCreateDate}<br>
-・${JJJ.resContent}<br>
-・${JJJ.resDeleteFlag}<br>
-・${JJJ.resStamp}<br>
-
+    <c:forEach var="ririri" items="${P}">
+        ・${ririri.resId}<br>
+        ・${ririri.resUserName}<br>
+        ・${ririri.resCreateDate}<br>
+        ・${ririri.resContent}<br>
+        ・${ririri.resDeleteFlag}<br>
+        ・${ririri.resStamp}<br>
+    </c:forEach>
 
 </body>
 </html>
