@@ -33,11 +33,11 @@
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
-<!--			<tr><td>ID</td><td><input type="text" name="Id"></td></tr>-->
+				<tr><td>ID</td><td><input type="text" name="Id"></td></tr>
 				<tr><td>–¼‘O</td><td><input type="text" name="User"></td></tr>
 				<tr><td colspan="2">“Še“à—e</td></tr>
 				<tr><td colspan="2">
-					<input id="textbox" type='text' name='Content' valign="top">
+			s		<input id="textbox" type='text' name='Content' valign="top">
 				</td></tr>
 				<tr><td>
 					<input type="checkbox" name="stamp" value="1">
@@ -52,16 +52,15 @@
 	</div>
 
 
-			<c:forEach var="user" items="${users}">
-				<table id="res">
-					<tr><td>${user.resUserName}</td><td id="resid">${user.resId}</td></tr>
-					<tr><td id="res_content" rowspan="2">${user.resContent}</td></tr>
-					<tr><td align="right" id="res_createdate" rowspan="2">
-						${user.resCreateDate}</td></tr>
-				</table>
-				<hr>
-				</c:forEach>
-		</table>
+		<c:forEach var="user" items="${users}">
+			<table id="res">
+				<tr><td>${user.resUserName}</td><td id="resid">${user.resId}</td></tr>
+				<tr><td id="res_content" colspan="2">${user.resContent}</td></tr>
+				<tr><td align="right" id="res_createdate" colspan="2">
+					${user.resCreateDate}</td></tr>
+			</table>
+			<hr>
+		</c:forEach>
 
 </body>
 </html>
