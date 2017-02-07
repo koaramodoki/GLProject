@@ -4,7 +4,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	
 <html>
-<head><title>掲示板テスト</title></head>
+<head><title>掲示板テスト</title>
+
+	<style type="text/css">
+		body{
+			font-size: 11px;
+		}
+		#textbox{
+			width:380px;
+			height:80px;
+		}
+	</style>
+</head>
 <body>
 <form method='post' action='dbatestservlet'>
 		id<input type="text" name='Id'><br>
