@@ -47,7 +47,6 @@
 		<table border="1">
 			<c:forEach var="user" items="${users}">
 				<tr>
-					<td>${Res.resId}</td>
 					<td>${user.resUserName}</td><td id="resid">${user.resId}</td>
 				</tr>
 				<tr><td id="res_content">${Res.Content}</td></tr>
