@@ -7,6 +7,7 @@ create sequence ResSequence
 create table GLThread(
 	ThId Number(7) constraint Thread_id Primary key,
 	ThName Varchar2(50),
+	ThUserName Varchar2(50) default'‚È‚È‚µ‚Ì‚È‚Á‚¿‚á‚ñ‚Ì‚¨‚â‚Â',
 	ThCreateDate Date);
 
 create table GLRes(
@@ -15,3 +16,5 @@ create table GLRes(
 	ResName Varchar2(50) default'‚È‚È‚µ‚Ì‚È‚Á‚¿‚á‚ñ‚Ìƒyƒbƒg‚Ì‚Ø‚Á‚¿‚á‚ñ',
 	ResContent Varchar2(4000) not null,
 	ResCreateDate Date);
+
+insert into GLThread values(ThreadSequence.nextval,'‚È‚È‚µ‚¿‚á‚ñ',Sysdate);
