@@ -62,7 +62,7 @@
 		<c:forEach var="user" items="${users}">
 			<table id="res">
 				<tr><td>${user.resId}:<xmp>${user.resUserName}</xmp></td></tr>
-				<tr><td id="res_content" colspan="2">${user.resContent}</td></tr>
+				<tr><td id="res_content" colspan="2"><xmp>${user.resContent}</xmp></td></tr>
 				<tr><td align="right" id="res_createdate" colspan="2">
 					${user.resCreateDate}</td></tr>
 			</table>
