@@ -13,6 +13,10 @@
 			width:380px;
 			height:80px;
 		}
+		#res_name{
+			width:254px;
+		}
+
 	</style>
 </head>
 <body>
@@ -20,7 +24,7 @@
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
-				<tr><td>ñºëO</td><td><input type="text" name="User"></td></tr>
+				<tr><td>ñºëO</td><td><input type="text" name="User" id="res_name"></td></tr>
 				<tr><td colspan="2">ìäçeì‡óe</td></tr>
 				<tr><td colspan="2">
 					<!--<input id="textbox" type='text' name='Content' valign="top">-->
