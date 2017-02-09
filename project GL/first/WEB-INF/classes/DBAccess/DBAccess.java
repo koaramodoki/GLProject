@@ -2,7 +2,7 @@ package DBAccess;
 
 import Bean.ResBean;
 
-import java.util.*;
+import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 
 public class DBAccess{
 	
-	public Connection cn;
+	Connection cn;
 	ArrayList<ResBean> resbean = new ArrayList<ResBean>();
 	
 	public void getConnection(){
@@ -32,12 +32,13 @@ public class DBAccess{
 			e.printStackTrace();
 			System.out.println("ê⁄ë±é∏îs");
 		}
+		
 	}
-	public ArrayList read(){
-		try{			
-			getConnection();
-			
+	public ArrayList resRead(){
+		try{						
 			String sql="SELECT resId,UserName,CreateDate,Content FROM ResTest ORDER BY CreateDate DESC";
+			
+			getConnection();
 			
 			Statement st=cn.createStatement();
 			
@@ -71,23 +72,14 @@ public class DBAccess{
 		
 		return resbean;
 	}
-	public void write(ResBean rb){
+	public void write(String sql){
 		try{
 			getConnection();
 			
-			String sql;
-			
-			String resUserName = rb.getResUserName();
-			if(resUserName==""){
-				sql="insert into ResTest(resId,CreateDate,Content) values (rtseq.nextval,sysdate,'"+rb.getResContent()+"')";
-			}else{
-				sql="insert into ResTest(resId,UserName,CreateDate,Content) values (rtseq.nextval,'"+resUserName+"',sysdate,'"+rb.getResContent()+"')";
-			}
-			
 			Statement st=cn.createStatement();
 			
-			int a = st.executeUpdate(sql);
-			System.out.println(a+"åèinsertÇµÇΩÇÊÅB");
+			int result = st.executeUpdate(sql);
+			System.out.println(result+"åèinsertÇµÇΩÇÊÅB");
 			
 			cn.commit();
 			
