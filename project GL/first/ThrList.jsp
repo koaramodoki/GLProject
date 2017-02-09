@@ -61,6 +61,7 @@
 		<div id="thr_count" align="center">レス数</div>
 	</div>
 		<hr>
+	<c:forEach var="thr" items="${}">
 	<div id="thr"><a href="https://www.google.co.jp">
 		<div id="thr_id" align="center">${thr.thrId}</div>
 		<div id="thr_name">${thr.thrName}</div>
@@ -71,5 +72,6 @@
 		
 	</a></div>
 	<hr>
+	</c:forEach>
 </body>
 </html>
