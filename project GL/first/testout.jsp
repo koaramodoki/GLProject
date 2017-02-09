@@ -39,7 +39,7 @@
 				<tr><td colspan="2">“Še“à—e</td></tr>
 				<tr><td colspan="2">
 					<!--<input id="textbox" type='text' name='Content' valign="top">-->
-					<textarea  type='text' name='Content'></textarea>
+					<textarea id="textbox" type='text' name='Content'></textarea>
 				</td></tr>
 				<tr><td>
 					<input type="checkbox" name="stamp" value="1">
@@ -62,7 +62,7 @@
 		<c:forEach var="user" items="${users}">
 			<table id="res">
 				<tr><td>${user.resId}:<xmp>${user.resUserName}</xmp></td></tr>
-				<tr><td id="res_content" colspan="2"><xmp>${user.resContent}</xmp></td></tr>
+				<tr><td id="res_content" colspan="2">${user.resContent}</td></tr>
 				<tr><td align="right" id="res_createdate" colspan="2">
 					${user.resCreateDate}</td></tr>
 			</table>
