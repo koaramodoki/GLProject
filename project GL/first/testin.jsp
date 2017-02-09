@@ -23,7 +23,8 @@
 				<tr><td>ñºëO</td><td><input type="text" name="User"></td></tr>
 				<tr><td colspan="2">ìäçeì‡óe</td></tr>
 				<tr><td colspan="2">
-					<input id="textbox" type='text' name='Content' valign="top">
+					<!--<input id="textbox" type='text' name='Content' valign="top">-->
+					<textarea id="textbox" type='text' name='Content'></textarea>
 				</td></tr>
 				<tr><td>
 					<input type="checkbox" name="stamp" value="1">
