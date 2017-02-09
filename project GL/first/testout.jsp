@@ -47,7 +47,6 @@
 				<tr><td>名前</td><td><input type="text" name="User" id="res_name"></td></tr>
 				<tr><td colspan="2">投稿内容</td></tr>
 				<tr><td colspan="2">
-					<!--<input id="textbox" type='text' name='Content' valign="top">-->
 					<textarea id="textbox" type='text' name='Content'></textarea>
 				</td></tr>
 				<tr><td>
@@ -61,8 +60,8 @@
 				<form>
 			</table>
 		</form>
-		<form>
-			<input type="button"  value="更新" onclick="koshin()">
+		<form method='get' action='dbatestservlet'>
+			<input type="submit" value="更新 ">
 		</form>
 	</div>
 
