@@ -28,6 +28,10 @@
 		#res_name{
 			width:254px;
 		}
+		textarea{  
+    	resize: none;  
+		}
+
 	</style>
 </head>
 <body>
