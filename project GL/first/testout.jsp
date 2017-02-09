@@ -6,6 +6,11 @@
 <html>
 <head>
 	<title>掲示板テスト</title>
+	<script type="text/javascript">
+		function koshin(){
+ 			location.reload();
+		}
+	</script>
 	<style type="text/css">
 		body{
 			font-size: 11px;
@@ -56,9 +61,8 @@
 				<form>
 			</table>
 		</form>
-		<form method='post' action='dbatestservlet'>
-		<div id="disp" style="visibility:hidden"><input type='text' name='Content'></div>
-			<input type="submit" value="更新 ">
+		<form>
+			<input type="button"  value="更新" onclick="koshin()">
 		</form>
 	</div>
 
