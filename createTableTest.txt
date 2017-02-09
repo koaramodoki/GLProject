@@ -9,4 +9,12 @@ Create table Restest(
 Create sequence UNKO
 	MAXVALUE 9999  
 
+スレッドテーブル作成（テスト）
+Create table ThreadTest(
+	ThId Number(7) Primary key,
+	ThName Varchar2(40),
+	CreateDate Date)
 	
+insert into ThreadTest(ThId,ThName,CreateDate) values(1,'ハリーポッターの謎について語るスレ',Sysdate);
+insert into ThreadTest(ThId,ThName,CreateDate) values(2,'ぼくの考えたスプラトゥーン最強ブキ',Sysdate);
+insert into ThreadTest(ThId,ThName,CreateDate) values(3,'ニート生活３０年そろそろやばいと思う',Sysdate);

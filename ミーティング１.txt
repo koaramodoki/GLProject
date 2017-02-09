@@ -1,0 +1,22 @@
+だれがどこまでどれをやるのか
+何ができているのか
+ミーティングを始まりと終わりでやる
+
+仕様変更が起きたら、ミーティングと報告
+
+メソッドを説明付きでエクセルにまとめる
+
+クラス		変数		説明
+
+
+
+
+
+<c:forEach var="user" items="${P}">
+    ・${user.resId}<br>
+    ・${user.resUserName}<br>
+    ・${user.resCreateDate}<br>
+    ・${user.resContent}<br>
+    ・${user.resDeleteFlag}<br>
+    ・${user.resStamp}<br>
+</c:forEach>
