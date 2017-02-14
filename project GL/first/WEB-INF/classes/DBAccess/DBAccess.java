@@ -12,7 +12,8 @@ import java.sql.ResultSet;
 public class DBAccess{
 	
 	Connection cn;
-	ArrayList<ResBean> resbean = new ArrayList<ResBean>();
+	private ArrayList<ResBean> resBean = new ArrayList<ResBean>();
+	private ArrayList<threadBean> threadBean = new ArrayList<threadBean>();
 	
 	public void getConnection(){
 		try{
