@@ -6,41 +6,22 @@
 <html>
 <head>
 	<title>掲示板テスト</title>
-	<script type="text/javascript">
-		function koshin(){
- 			location.reload();
-		}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</script>
-	<style type="text/css">
-		body{
-			font-size: 11px;
-		}
-		#textbox{
-			width:380px;
-			height:80px;
-		}
-		#res_content{
-			width:480px;
-			font-size: 16px;
-		}
-		#res{
-			width: 50%;
-		}
-		#res_createdate{
-			font-size: 11px;
-			color: #333;
-		}
-		#res_name{
-			width:254px;
-		}
-		textarea{  
-    	resize: none;  
-		}
-
-	</style>
+<link rel="stylesheet" type="text/css" href="CSS/ResList.css">
 </head>
+<script type="text/javascript" src="javaScript/ThreadList.js"></script>
 <body>
-
+<header>
+	<button id="button" id="hd">
+		<i class="fa fa-bars"></i>投稿
+	</button>
+	<form id="hd">
+		<input type="button" value="更新" onclick="koshin()">
+	</form>
+</header>
+<nav id="slide_menu">
+	<br><br>
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
@@ -60,11 +41,9 @@
 				<form>
 			</table>
 		</form>
-		<form method='get' action='dbatestservlet'>
-			<input type="submit" value="更新 ">
-		</form>
 	</div>
-
+</nav>
+<br><br><br>
 
 		<c:forEach var="user" items="${users}">
 			<table id="res">
@@ -75,6 +54,5 @@
 			</table>
 			<hr>
 		</c:forEach>
-
 </body>
 </html>
