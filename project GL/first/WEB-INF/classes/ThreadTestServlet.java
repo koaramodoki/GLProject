@@ -7,8 +7,7 @@ import java.sql.Statement;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.sql.ResultSet;
-import java.math.BigDecimal;
-import ip.Oracletest;
+import Execute.ResExcute;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,13 +20,13 @@ import javax.servlet.ServletException;
 public class RegistTestServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req,HttpServletResponse res)
 	throws IOException,ServletException{
-		
+
 		req.setCharacterEncoding("Windows-31J");
-		
+
 		Oracletest ora = new Oracletest();
-		
-		
-		
+
+
+
 		try{//決まり　データベースと接続時に使うもの　Driver インターフェースを実装したクラスをメモリへロード
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
@@ -37,23 +36,23 @@ public class RegistTestServlet extends HttpServlet{
 	 	 	 ("jdbc:oracle:thin:@localhost:1521:orcl",	"info","pro");
 			cn.setAutoCommit(false);
 			System.out.println("接続完了");
-			
+
 			//SQLを変数に格納
 			String sql = "SELECT empno,ename from emp";
 			//Statement インターフェイスを実装するクラスのインスタンスを取得
 			Statement st = cn.createStatement();
 			//SQLを実行しトランザクションが開始される　処理けんすうが返される
 			//int count = st.executeUpdate(sql);
-			
-			
+
+
 			//SELECT文を実行し ResultSetインターフェイスを実装したクラスのインスタンスが返る
 			ResultSet rs=st.executeQuery(sql);
-			
+
 			rs.next();
 			ora.setName(rs.getString(1));
 			ora.setTable(rs.getString(2));
-			
-			
+
+
 			//トランザクションをコミット
 			cn.commit();
 			//ステートメントをclose
@@ -61,14 +60,14 @@ public class RegistTestServlet extends HttpServlet{
 			//Oracleから切断する
 			cn.close();
 			System.out.println("切断完了");
-			
+
 			req.setAttribute("ora",ora);
-			
-			
+
+
 			RequestDispatcher dispatcher=
 			req.getRequestDispatcher("output");
 			dispatcher.forward(req,res);
-			
+
 		}catch(ClassNotFoundException e){
 			e.printStackTrace();
 			System.out.println("クラスがない");
@@ -79,7 +78,7 @@ public class RegistTestServlet extends HttpServlet{
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-	
-			
+
+
 	}
 }
