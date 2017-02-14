@@ -44,7 +44,7 @@ public class ThreadBean{
 		public String getThrUpdateDate(){
 			return thrUpdateDate;
 		}
-		public void setThrCreateDate(String _UpdateDate){
+		public void setThrUpdateDate(String _UpdateDate){
 			this.thrUpdateDate = _UpdateDate;
 		}
 
