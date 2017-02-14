@@ -1,3 +1,7 @@
+<%@ page pageEncoding="Windows-31J"
+	contentType="text/html;charset=Windows-31J" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,24 +19,20 @@
 		<input type="button" value="更新" onclick="koshin()">
 	</form>
 </header>
-<form>
-<input type="button"  value="更新" onclick="koshin()">
-</form>
 <!-- スライドメニュー部分-->
 <nav id="slide_menu">
 	<br><br>
-
  	<div>
-		<form method='post' action='dbatestservlet'>
+		<form method='post' action='MainServlet'>
 			<table>
-				<tr><td>名前</td><td><input type="text" name="User" id="res_name"></td></tr>
-				<tr><td>スレッド名</td><td><input type="text" name="User" id="res_name"></td></tr>
+				<tr><td>名前:</td><td><input type="text" name="User" id="thr_user"></td></tr>
+				<tr><td>スレッド名:</td><td><input type="text" name="name" id="thr_name"></td></tr>
 				<tr><td align="right" colspan="2"><input type="submit" value="作成 "></td></tr>
 			</table>
 		</form>
 	</div>
 </nav>
- <br>
+ <br><br>
 
 
 	<div id=thr_top>

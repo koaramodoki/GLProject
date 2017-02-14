@@ -6,7 +6,7 @@
 </head>
 	<body>
 		<h1>題名</h1>
-		<form method='get' action='mainServlet'>
+		<form method='get' action='MainServlet'>
 			<input type="submit" value="掲示板を始める！">
 		</form>
 	</body>
