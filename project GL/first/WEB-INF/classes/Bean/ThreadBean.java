@@ -2,50 +2,51 @@ package Bean;
 
 public class ThreadBean{
 
-		private int thrId;
-		private String thrName;
-		private String thrCreateUser;
-		private String thrCreateDate;
-		private String thrUpdateDate;
+		private int thId;
+		private String thName;
+		private String thCreateUser;
+		private String thCreateDate;
+		private String thUpdateDate;
 		private int resCount;
+		private ResBean resBean;
 
 		public ThreadBean(){}
 
 
 
-		public int getThrId(){
-			return thrId;
+		public int getThId(){
+			return thId;
 		}
-		public void setThrId(int _thrId){
-			this.thrId = _thrId;
-		}
-
-		public String getThrName(){
-			return thrName;
-		}
-		public void setThrName(String _thrName){
-			this.thrName = _thrName;
+		public void setThId(int _thId){
+			this.thId = _thId;
 		}
 
-		public String getThrCreateUser(){
-			return thrCreateUser;
+		public String getThName(){
+			return thName;
 		}
-		public void setThrCreateUser(String _CreateUser){
-			this.thrCreateUser = _CreateUser;
-
-		}
-		public String getThrCreateDate(){
-			return thrCreateDate;
-		}
-		public void setThrCreateDate(String _CreateDate){
-			this.thrCreateDate = _CreateDate;
+		public void setThName(String _thName){
+			this.thName = _thName;
 		}
 
-		public String getThrUpdateDate(){
-			return thrUpdateDate;
+		public String getThCreateUser(){
+			return thCreateUser;
 		}
-		public void setThrUpdateDate(String _UpdateDate){
-			this.thrUpdateDate = _UpdateDate;
+		public void setThCreateUser(String _CreateUser){
+			this.thCreateUser = _CreateUser;
+
+		}
+		public String getThCreateDate(){
+			return thCreateDate;
+		}
+		public void setThCreateDate(String _CreateDate){
+			this.thCreateDate = _CreateDate;
+		}
+
+		public String getThUpdateDate(){
+			return thUpdateDate;
+		}
+		public void setThUpdateDate(String _UpdateDate){
+			this.thUpdateDate = _UpdateDate;
 		}
 
 		public int getResCount(){

@@ -9,12 +9,12 @@
 		<servlet-name>AAA</servlet-name>
 		<jsp-file>/AAA.jsp</jsp-file>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>AAA</servlet-name>
 		<url-pattern>/AAA</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>BBB</servlet-name>
 		<jsp-file>/BBB.jsp</jsp-file>
@@ -24,24 +24,24 @@
 		<servlet-name>BBB</servlet-name>
 		<url-pattern>/BBB</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>testServlet</servlet-name>
 		<servlet-class>testServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>testServlet</servlet-name>
 		<url-pattern>/testServlet</url-pattern>
 	</servlet-mapping>
-	
+
 
 
 	<servlet>
 		<servlet-name>testin</servlet-name>
 		<jsp-file>/testin.jsp</jsp-file>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>testin</servlet-name>
 		<url-pattern>/testin</url-pattern>
@@ -51,24 +51,38 @@
 		<servlet-name>dbatestservlet</servlet-name>
 		<servlet-class>DBATestServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>dbatestservlet</servlet-name>
 		<url-pattern>/dbatestservlet</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>testout</servlet-name>
 		<jsp-file>/testout.jsp</jsp-file>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>testout</servlet-name>
 		<url-pattern>/testout</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet>
+		<servlet-name>Threadin</servlet-name>
+		<jsp-file>/top.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Threadin</servlet-name>
+		<url-pattern>/top</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MainServlet</servlet-name>
+		<servlet-class>MainServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Mainservlet</servlet-name>
+		<url-pattern>/MainServlet</url-pattern>
+	</servlet-mapping>
 
 
 </web-app>
-
-

@@ -1,6 +1,7 @@
 import Bean.ResBean;
 import DBAccess.DBAccess;
-import Execute.ResExecute;
+import Execute.MainExecute;
+import Bean.ThreadBean;
 
 import java.util.ArrayList;
 
@@ -19,16 +20,19 @@ public class MainServlet extends HttpServlet{
 
 		//文字コード設定
 		req.setCharacterEncoding("Windows-31J");
+		ArrayList users = new ArrayList();
 
-		//ResBeanを引数にaddResを実行
-		ResExecute rx = new ResExecute();
-		rx.addRes(rb);
+        ThreadBean threadBean = new ThreadBean();
 
-		DBAccess dba = new DBAccess();
-		ArrayList<ThreadBean> users = dba.resRead();
+        MainExecute mainExecute = new MainExecute();
 
-		//HttpServletRequetの実装クラスのインスタンスに
-		//usersという名前でデータを登録する
+		threadBean.setThName(req.getParameter("name"));
+		threadBean.setThCreateUser(req.getParameter("user"));
+
+		mainExecute.addThread(threadBean);
+
+		users = mainExecute.getThread();
+
 
 		req.setAttribute("users",users);
 
@@ -36,7 +40,7 @@ public class MainServlet extends HttpServlet{
 		//インスタンスを取得する
 		//引数は転送先のURL
 		RequestDispatcher dis=
-		req.getRequestDispatcher("testout");
+		req.getRequestDispatcher("ThreadOut");
 
 		//上で設定した宛先にreqとresを転送する
 		dis.forward(req,res);
@@ -59,7 +63,7 @@ public class MainServlet extends HttpServlet{
 		rx.addRes(rb);
 
 		DBAccess dba = new DBAccess();
-		ArrayList<ResBean> users = dba.resRead();
+		ArrayList<ResBean> users = dba.ThreadRead();
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する

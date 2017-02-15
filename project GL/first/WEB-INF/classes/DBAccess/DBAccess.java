@@ -74,6 +74,46 @@ public class DBAccess{
 
 		return resBean;
 	}
+
+	public ArrayList ThreadRead(){
+		try{
+			String sql="SELECT ThId,ThName FROM GLThread ORDER BY ThId DESC";
+
+			getConnection();
+
+			Statement st=cn.createStatement();
+
+			ResultSet rs=st.executeQuery(sql);
+
+			while(rs.next()){
+
+				ThreadBean tb = new ThreadBean();
+
+				tb.setThId(rs.getInt(1));
+				tb.setThName(rs.getString(2));
+
+				threadBean.add(tb);
+
+			}
+			System.out.println("ÉäÉXÉgÇ…í«â¡ÇµÇΩÇÊÅB");
+
+			cn.commit();
+
+			st.close();
+
+			cn.close();
+
+		}catch(SQLException e){
+			e.printStackTrace();
+			System.out.println("ê⁄ë±é∏îs");
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("ê⁄ë±é∏îs");
+		}
+
+		return threadBean;
+	}
+
 	public void write(String sql){
 		try{
 			getConnection();

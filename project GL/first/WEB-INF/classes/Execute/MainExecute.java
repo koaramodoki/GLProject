@@ -1,6 +1,7 @@
 package Execute;
 
 import Bean.ResBean;
+import Bean.ThreadBean;
 import DBAccess.DBAccess;
 
 import java.util.ArrayList;
@@ -8,21 +9,25 @@ import java.util.ArrayList;
 public class MainExecute{
 
 	DBAccess dba = new DBAccess();
+	int ThreadId;
 
-	public void addRes(ResBean rb){
+	public void addThread(ThreadBean tb){
 		String sql;
 
-		String resUserName = rb.getResUserName();
-		if(resUserName==""){
-			sql="insert into ResTest(resId,CreateDate,Content) values (rtseq.nextval,sysdate,'"+rb.getResContent()+"')";
+		String ThName = tb.getThName();
+		String ThCreateUser = tb.getThCreateUser();
+		if(ThCreateUser==""){
+			sql="insert into GLThread(ThId,ThName,ThCreateDate) values (rtseq.nextval,'"+ThName+"',sysdate)";
 		}else{
-			sql="insert into ResTest(resId,UserName,CreateDate,Content) values (rtseq.nextval,'"+resUserName+"',sysdate,'"+rb.getResContent()+"')";
+			sql="insert into GLThread(ThId,ThName,ThUserName,ThCreateDate) values (rtseq.nextval,'"+ThName+"','"+ThCreateUser+"',sysdate)";
 		}
 
 		dba.write(sql);
 	}
-	public void getRes(){
-
+	public ArrayList getThread(){
+		ArrayList al = new ArrayList();
+		al = dba.ThreadRead();
+		return al;
 	}
 
 
