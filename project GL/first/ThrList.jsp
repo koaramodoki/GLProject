@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ã‚¹ãƒ¬ãƒƒãƒ‰ãƒªã‚¹ãƒˆ</title>
+	<title>ƒXƒŒƒbƒhƒŠƒXƒg</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="CSS/ThreadList.css">
 <script type="text/javascript" src="javaScript/ThreadList.js"></script>
@@ -14,22 +14,22 @@
 <div class="layer"></div>
 <header>
 	<form id="hd">
-		<input type="submit" value="æ›´æ–°">
+		<input type="submit" value="XV">
 		<input type="text" style="display: none">	
 	</form>
 	<button id="button" id="hd">
-		<a class="fa fa-bars">ã‚¹ãƒ¬ãƒƒãƒ‰ä½œæˆ</a>
+		<a class="fa fa-bars">ƒXƒŒƒbƒhì¬</a>
 	</button>
 </header>
-<!-- ã‚¹ãƒ©ã‚¤ãƒ‰ãƒ¡ãƒ‹ãƒ¥ãƒ¼éƒ¨åˆ†-->
+<!-- ƒXƒ‰ƒCƒhƒƒjƒ…[•”•ª-->
 <nav id="slide_menu">
 	<br><br>
  	<div>
 		<form method='post' action='MainServlet'>
 			<table>
-				<tr><td>åå‰:</td><td><input type="text" name="User" id="thr_user"></td></tr>
-				<tr><td>ã‚¹ãƒ¬ãƒƒãƒ‰å:</td><td><input type="text" name="name" id="thr_name"></td></tr>
-				<tr><td align="right" colspan="2"><input type="submit" value="ä½œæˆ "></td></tr>
+				<tr><td>–¼‘O:</td><td><input type="text" name="User" id="thr_user"></td></tr>
+				<tr><td>ƒXƒŒƒbƒh–¼:</td><td><input type="text" name="name" id="thr_name"></td></tr>
+				<tr><td align="right" colspan="2"><input type="submit" value="ì¬ "></td></tr>
 			</table>
 		</form>
 	</div>
@@ -39,22 +39,20 @@
 
 	<div id=thr_top>
 		<div id="thr_id" align="center">ID</div>
-		<div id="thr_name">ã‚¹ãƒ¬ãƒƒãƒ‰å</div>
-		<div id="thr_create_user">ä½œæˆè€…</div>
-		<div id="thr_create_date">ä½œæˆæ—¥</div>
-		<div id="thr_update">æœ€çµ‚æ›´æ–°æ—¥</div>
-		<div id="thr_count" align="center">ãƒ¬ã‚¹æ•°</div>
+		<div id="thr_name">ƒXƒŒƒbƒh–¼</div>
+		<div id="thr_create_user">ì¬Ò</div>
+		<div id="thr_create_date">ì¬“ú</div>
+		<div id="thr_update">ÅIXV“ú</div>
+		<div id="thr_count" align="center">ƒŒƒX”</div>
 	</div>
 		<hr>
 	<c:forEach var="thr" items="${users}">
 	<div id="thr"><a href="https://www.google.co.jp">
-		<div id="thr_id" align="center">${thr.thrId}</div>
-		<div id="thr_name">${thr.thrName}</div>
-		<div id="thr_create_user">${thr.thrCreateUser}</div>
-		<div id="thr_create_date">${thrCreateDate}</div>
-		<div id="thr_update">${thrUpdateDate}</div>
-		<div id="thr_count" align="center">${resCount}</div>	
-		
+		<div id="thr_id" align="center">${thr.thId}</div>
+		<div id="thr_name">${thr.thName}</div>
+		<div id="thr_create_user">${thr.thCreateUser}</div>
+		<div id="thr_update">${thUpdateDate}</div>
+		<div id="thr_count" align="center">${resCount}</div>
 	</a></div>
 	</c:forEach>
 	<hr>
