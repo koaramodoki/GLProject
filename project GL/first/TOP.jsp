@@ -1,13 +1,13 @@
-Ôªø<%@ page pageEncoding="Windows-31J"
+<%@ page pageEncoding="Windows-31J"
 	contentType="text/html;charset=Windows-31J" %>
 <html>
 <head>
 	<title>TOP</title>
 </head>
 	<body>
-		<h1>È°åÂêç</h1>
+		<h1>Ç‚Ç‹Çæ</h1>
 		<form method='get' action='MainServlet'>
-			<input type="submit" value="Êé≤Á§∫Êùø„ÇíÂßã„ÇÅ„ÇãÔºÅ">
+			<input type="submit" value="åfé¶î¬ÇénÇﬂÇÈÅI">
 		</form>
 	</body>
 </html>
