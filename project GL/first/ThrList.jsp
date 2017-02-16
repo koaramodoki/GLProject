@@ -11,6 +11,7 @@
 <script type="text/javascript" src="javaScript/ThreadList.js"></script>
 </head>
 <body>
+<div class="layer"></div>
 <header>
 	<button id="button" id="hd">
 		<i class="fa fa-bars"></i>スレッド作成 

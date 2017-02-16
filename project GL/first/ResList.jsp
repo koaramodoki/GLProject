@@ -12,8 +12,8 @@
 </head>
 <script type="text/javascript" src="javaScript/ThreadList.js"></script>
 <body>
-<header>
 <div class="layer"></div>
+<header>
 	<button id="button" id="hd">
 		<i class="fa fa-bars"></i>投稿
 	</button>
