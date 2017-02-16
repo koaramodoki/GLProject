@@ -68,7 +68,7 @@
 
 	<servlet>
 		<servlet-name>Threadin</servlet-name>
-		<jsp-file>/top.jsp</jsp-file>
+		<jsp-file>/TOP.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Threadin</servlet-name>
@@ -83,6 +83,16 @@
 		<servlet-name>MainServlet</servlet-name>
 		<url-pattern>/MainServlet</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ThrList</servlet-name>
+		<jsp-file>/ThrList.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ThrList</servlet-name>
+		<url-pattern>/ThrList</url-pattern>
+	</servlet-mapping>
+	
 
 
 </web-app>
