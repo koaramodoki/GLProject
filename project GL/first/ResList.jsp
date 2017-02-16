@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>æŽ²ç¤ºæ¿ãƒ†ã‚¹ãƒˆ</title>
+	<title>ŒfŽ¦”ÂƒeƒXƒg</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</script>
 <link rel="stylesheet" type="text/css" href="CSS/ResList.css">
@@ -15,10 +15,10 @@
 <div class="layer"></div>
 <header>
 	<button id="button" id="hd">
-		<i class="fa fa-bars"></i>æŠ•ç¨¿
+		<i class="fa fa-bars"></i>“Še
 	</button>
 	<form id="hd">
-		<input type="button" value="æ›´æ–°" onclick="koshin()">
+		<input type="button" value="XV" onclick="koshin()">
 	</form>
 </header>
 <nav id="slide_menu">
@@ -26,8 +26,8 @@
 	<div>
 		<form method='post' action='dbatestservlet'>
 			<table>
-				<tr><td>åå‰</td><td><input type="text" name="User" id="res_name"></td></tr>
-				<tr><td colspan="2">æŠ•ç¨¿å†…å®¹</td></tr>
+				<tr><td>–¼‘O</td><td><input type="text" name="User" id="res_name"></td></tr>
+				<tr><td colspan="2">“Še“à—e</td></tr>
 				<tr><td colspan="2">
 					<textarea id="textbox" type='text' name='Content'></textarea>
 				</td></tr>
@@ -38,7 +38,7 @@
 					<input type="checkbox" name="stamp" value="4">
 					<input type="checkbox" name="stamp" value="5">
 				</td></tr>
-				<tr><td align="right" colspan="2"><input type="submit" value="é€ä¿¡ "></td></tr>
+				<tr><td align="right" colspan="2"><input type="submit" value="‘—M "></td></tr>
 				<form>
 			</table>
 		</form>
