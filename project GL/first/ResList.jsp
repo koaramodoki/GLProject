@@ -18,7 +18,8 @@
 		<i class="fa fa-bars"></i>投稿
 	</button>
 	<form id="hd">
-		<input type="button" value="更新" onclick="koshin()">
+		<input type="text">
+		<input type="submit" value="更新">
 	</form>
 </header>
 <nav id="slide_menu">
