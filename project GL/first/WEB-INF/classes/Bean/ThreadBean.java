@@ -6,7 +6,6 @@ public class ThreadBean{
 		private String thrName;
 		private String thrCreateUser;
 		private String thrCreateDate;
-		private String thrUpdateDate;
 		private int resCount;
 		private ResBean resBean;
 
