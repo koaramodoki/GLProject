@@ -1,24 +1,29 @@
 $(function(){
-var menu = $('#slide_menu'), // スライドインするメニューを指定
-    menuBtn = $('#button'), // メニューボタンを指定
-    body = $(document.body),     
+var menu = $('#slide_menu'),
+    menuBtn = $('#button'),
+    body = $(document.body),
+    // .layer もオブジェクト化    
+    layer = $('.layer'),
     menuWidth = menu.outerWidth();                
-     
-    // メニューボタンをクリックした時の動き
+         
     menuBtn.on('click', function(){
-    // body に open クラスを付与する
     body.toggleClass('open');
         if(body.hasClass('open')){
-            // open クラスが body についていたらメニューをスライドインする
-            body.animate({'top' : menuWidth }, 300);            
+            // css で非表示にしていた .layer を表示
+            $(".layer").show();
+            body.animate({'top' : menuWidth }, 300);
             menu.animate({'top' : 0 }, 300);                    
         } else {
-            // open クラスが body についていなかったらスライドアウトする
+            // .layer を非表示
+            $(".layer").hide();
             menu.animate({'top' : -menuWidth }, 300);
             body.animate({'top' : 0 }, 300);            
         }             
     });
-});
-function koshin(){
-  location.reload();
-}    
+    // .layer をクリック時にもメニューを閉じる
+    layer.on('click', function(){
+            menu.animate({'top' : -menuWidth }, 300);
+            body.animate({'top' : 0 }, 300).removeClass('open');
+            layer.hide();
+    });
+});  
