@@ -2,57 +2,58 @@ package Bean;
 
 public class ThreadBean{
 
-		private int thId;
-		private String thName;
-		private String thCreateUser;
-		private String thCreateDate;
-		private String thUpdateDate;
+		private int thrId;
+		private String thrName;
+		private String thrCreateUser;
+		private String thrCreateDate;
+		private String thrUpdateDate;
 		private int resCount;
 		private ResBean resBean;
 
 		public ThreadBean(){}
 
 
-
-		public int getThId(){
-			return thId;
+//================================================
+		public int getThrId(){
+			return thrId;
 		}
-		public void setThId(int _thId){
-			this.thId = _thId;
+		public void setThrId(int _thId){
+			this.thrId = _thId;
 		}
-
-		public String getThName(){
-			return thName;
+//=================================================
+		public String getThrName(){
+			return thrName;
 		}
-		public void setThName(String _thName){
-			this.thName = _thName;
+		public void setThrName(String _thName){
+			this.thrName = _thName;
 		}
-
-		public String getThCreateUser(){
-			return thCreateUser;
+//=================================================
+		public String getThrCreateUser(){
+			return thrCreateUser;
 		}
-		public void setThCreateUser(String _CreateUser){
-			this.thCreateUser = _CreateUser;
-
+		public void setThrCreateUser(String _CreateUser){
+			this.thrCreateUser = _CreateUser;
 		}
-		public String getThCreateDate(){
-			return thCreateDate;
+//==================================================
+		public String getThrCreateDate(){
+			return thrCreateDate;
 		}
-		public void setThCreateDate(String _CreateDate){
+		public void setThrCreateDate(String _CreateDate){
 			this.thCreateDate = _CreateDate;
 		}
-
-		public String getThUpdateDate(){
-			return thUpdateDate;
-		}
-		public void setThUpdateDate(String _UpdateDate){
-			this.thUpdateDate = _UpdateDate;
-		}
-
+//===================================================
 		public int getResCount(){
 			return resCount;
 		}
 		public void setResCount(int _resCount){
 			this.resCount = _resCount;
 		}
+//===================================================
+		public ResBean getresBean(){
+			return ResBean;
+		}
+		public void setresBean(ResBean _resBean){
+			this.resBean = _resBean;
+		}	
+//====================================================
 }

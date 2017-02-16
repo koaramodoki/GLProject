@@ -5,7 +5,6 @@ public class ResBean{
 	private String resUserName;
 	private String resCreateDate;
 	private String resContent;
-	private int resDeleteFlag;
 	private int resStamp;
 
 	public ResBean(){}
@@ -22,9 +21,6 @@ public class ResBean{
 	public String getResContent(){
 		return resContent;
 	}
-	public int getResDeleteFlag(){
-		return resDeleteFlag;
-	}
 	public int getResStamp(){
 		return resStamp;
 	}
@@ -40,9 +36,6 @@ public class ResBean{
 	}
 	public void setResContent(String resContent){
 		this.resContent=resContent;
-	}
-	public void setResDeleteFlag(int resDeleteFlag){
-		this.resDeleteFlag=resDeleteFlag;
 	}
 	public void setResStamp(int resStamp){
 		this.resStamp=resStamp;
