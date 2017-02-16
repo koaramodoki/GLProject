@@ -21,7 +21,4 @@ public class ResExecute{
 
 		dba.write(sql);
 	}
-	public ArrayList getRes(int resId){
-
-	}
 }
