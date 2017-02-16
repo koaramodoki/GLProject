@@ -5,9 +5,9 @@
 	<title>TOP</title>
 </head>
 	<body>
-		<h1>題名</h1>
-		<form method='get' action='MainServlet'>
-			<input type="submit" value="掲示板を始める！">
+		<h1>�薼</h1>
+		<form method='post' action='MainServlet'>
+			<input type="submit" value="�f�����n�߂�I ">
 		</form>
 	</body>
 </html>
