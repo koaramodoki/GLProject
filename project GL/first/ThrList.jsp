@@ -54,7 +54,7 @@
 		<div id="thr_update">${thr.thrCreateDate}</div>
 		<div id="thr_count" align="center">${thr.resCount}</div>
 	</a></div>
-	</c:forEach>
 	<hr>
+	</c:forEach>
 </body>
 </html>
