@@ -42,7 +42,7 @@
 		<div id="thr_name">スレッド名</div>
 		<div id="thr_create_user">作成者</div>
 		<div id="thr_create_date">作成日</div>
-		<div id="thr_update">最終更新日</div>
+		<div id="thr_update">作成日</div>
 		<div id="thr_count" align="center">レス数</div>
 	</div>
 		<hr>
@@ -50,8 +50,8 @@
 	<div id="thr"><a href="https://www.google.co.jp">
 		<div id="thr_id" align="center">${thr.thrId}</div>
 		<div id="thr_name">${thr.thrName}</div>
-		<div id="thr_create_user">${thr.thCreateUser}</div>
-		<div id="thr_update">${thr.thrUpdateDate}</div>
+		<div id="thr_create_user">${thr.thrCreateUser}</div>
+		<div id="thr_update">${thr.thrCreateDate}</div>
 		<div id="thr_count" align="center">${thr.resCount}</div>
 	</a></div>
 	</c:forEach>
