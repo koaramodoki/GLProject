@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>test</title>
+	<title>スレッドリスト</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="CSS/ThreadList.css">
 <script type="text/javascript" src="javaScript/ThreadList.js"></script>
@@ -13,12 +13,13 @@
 <body>
 <div class="layer"></div>
 <header>
-	<button id="button" id="hd">
-		<i class="fa fa-bars"></i>スレッド作成 
-	</button>
 	<form id="hd">
-		<input type="button" value="更新" onclick="koshin()">
+		<input type="submit" value="更新">
+		<input type="text" style="display: none">	
 	</form>
+	<button id="button" id="hd">
+		<a class="fa fa-bars">スレッド作成</a>
+	</button>
 </header>
 <!-- スライドメニュー部分-->
 <nav id="slide_menu">
@@ -33,7 +34,7 @@
 		</form>
 	</div>
 </nav>
- <br><br>
+ <br><br><br>
 
 
 	<div id=thr_top>
@@ -45,6 +46,7 @@
 		<div id="thr_count" align="center">レス数</div>
 	</div>
 		<hr>
+	<c:forEach var="thr" items="${users}">
 	<div id="thr"><a href="https://www.google.co.jp">
 		<div id="thr_id" align="center">${thr.thrId}</div>
 		<div id="thr_name">${thr.thrName}</div>
@@ -54,6 +56,7 @@
 		<div id="thr_count" align="center">${resCount}</div>	
 		
 	</a></div>
+	</c:forEach>
 	<hr>
 </body>
 </html>
