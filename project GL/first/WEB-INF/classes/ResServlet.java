@@ -49,7 +49,25 @@ public class ResServlet extends HttpServlet{
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws ServletException,IOException{
 		
+		//文字コード設定
+		req.setCharacterEncoding("Windows-31J");
 		
+		DBAccess dba = new DBAccess();
+		ArrayList<ResBean> users = dba.resRead();
+
+		//HttpServletRequetの実装クラスのインスタンスに
+		//usersという名前でデータを登録する
+
+		req.setAttribute("users",users);
+
+		//RequestDispatcherインターフェイスを実装するクラスの
+		//インスタンスを取得する
+		//引数は転送先のURL
+		RequestDispatcher dis=
+		req.getRequestDispatcher("ResList");
+
+		//上で設定した宛先にreqとresを転送する
+		dis.forward(req,res);
 		
 	}
 }

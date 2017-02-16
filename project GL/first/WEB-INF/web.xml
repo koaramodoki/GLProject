@@ -38,23 +38,23 @@
 
 
 	<servlet>
-		<servlet-name>testin</servlet-name>
-		<jsp-file>/testin.jsp</jsp-file>
+		<servlet-name>ResList</servlet-name>
+		<jsp-file>/ResList.jsp</jsp-file>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>testin</servlet-name>
-		<url-pattern>/testin</url-pattern>
+		<servlet-name>ResList</servlet-name>
+		<url-pattern>/ResList</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>dbatestservlet</servlet-name>
-		<servlet-class>DBATestServlet</servlet-class>
+		<servlet-name>ResServlet</servlet-name>
+		<servlet-class>ResServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>dbatestservlet</servlet-name>
-		<url-pattern>/dbatestservlet</url-pattern>
+		<servlet-name>ResServlet</servlet-name>
+		<url-pattern>/ResServlet</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
@@ -80,7 +80,7 @@
 		<servlet-class>MainServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Mainservlet</servlet-name>
+		<servlet-name>MainServlet</servlet-name>
 		<url-pattern>/MainServlet</url-pattern>
 	</servlet-mapping>
 

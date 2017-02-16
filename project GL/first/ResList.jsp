@@ -24,7 +24,7 @@
 <nav id="slide_menu">
 	<br><br>
 	<div>
-		<form method='post' action='dbatestservlet'>
+		<form method='post' action='ResServlet'>
 			<table>
 				<tr><td>ñºëO</td><td><input type="text" name="User" id="res_name"></td></tr>
 				<tr><td colspan="2">ìäçeì‡óe</td></tr>
