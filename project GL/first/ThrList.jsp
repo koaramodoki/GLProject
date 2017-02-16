@@ -48,11 +48,11 @@
 		<hr>
 	<c:forEach var="thr" items="${users}">
 	<div id="thr"><a href="https://www.google.co.jp">
-		<div id="thr_id" align="center">${thr.thId}</div>
-		<div id="thr_name">${thr.thName}</div>
+		<div id="thr_id" align="center">${thr.thrId}</div>
+		<div id="thr_name">${thr.thrName}</div>
 		<div id="thr_create_user">${thr.thCreateUser}</div>
-		<div id="thr_update">${thUpdateDate}</div>
-		<div id="thr_count" align="center">${resCount}</div>
+		<div id="thr_update">${thr.thrUpdateDate}</div>
+		<div id="thr_count" align="center">${thr.resCount}</div>
 	</a></div>
 	</c:forEach>
 	<hr>
