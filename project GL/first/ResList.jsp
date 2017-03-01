@@ -27,8 +27,8 @@
 	<div>
 		<form method='post' action='ResServlet'>
 			<table>
-				<tr><td>??ÅeO</td><td><input type="text" name="User" id="res_name"></td></tr>
-				<tr><td colspan="2">Åg??eÅg??e</td></tr>
+				<tr><td>ñºëO</td><td><input type="text" name="User" id="res_name"></td></tr>
+				<tr><td colspan="2">ìäçeì‡óe</td></tr>
 				<tr><td colspan="2">
 					<textarea id="textbox" type='text' name='Content'></textarea>
 				</td></tr>
@@ -39,7 +39,7 @@
 					<input type="checkbox" name="stamp" value="4">
 					<input type="checkbox" name="stamp" value="5">
 				</td></tr>
-				<tr><td align="right" colspan="2"><input type="submit" value="Åe??M "></td></tr>
+				<tr><td align="right" colspan="2"><input type="submit" value="ëóêM "></td></tr>
 				<form>
 			</table>
 		</form>
