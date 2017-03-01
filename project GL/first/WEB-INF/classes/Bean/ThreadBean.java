@@ -16,15 +16,15 @@ public class ThreadBean{
 		public int getThrId(){
 			return thrId;
 		}
-		public void setThrId(int _thId){
-			this.thrId = _thId;
+		public void setThrId(int _thrId){
+			this.thrId = _thrId;
 		}
 //=================================================
 		public String getThrName(){
 			return thrName;
 		}
-		public void setThrName(String _thName){
-			this.thrName = _thName;
+		public void setThrName(String _thrName){
+			this.thrName = _thrName;
 		}
 //=================================================
 		public String getThrCreateUser(){
@@ -38,7 +38,7 @@ public class ThreadBean{
 			return thrCreateDate;
 		}
 		public void setThrCreateDate(String _CreateDate){
-			this.thCreateDate = _CreateDate;
+			this.thrCreateDate = _CreateDate;
 		}
 //===================================================
 		public int getResCount(){
@@ -48,11 +48,11 @@ public class ThreadBean{
 			this.resCount = _resCount;
 		}
 //===================================================
-		public ResBean getresBean(){
-			return ResBean;
+		public ResBean getResBean(){
+			return resBean;
 		}
-		public void setresBean(ResBean _resBean){
+		public void setResBean(ResBean _resBean){
 			this.resBean = _resBean;
-		}	
+		}
 //====================================================
 }

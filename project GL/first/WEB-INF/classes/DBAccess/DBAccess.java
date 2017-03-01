@@ -89,8 +89,16 @@ public class DBAccess{
 
 				ThreadBean tb = new ThreadBean();
 
-				tb.setThId(rs.getInt(1));
-				tb.setThName(rs.getString(2));
+				tb.setThrId(rs.getInt(1));
+
+				tb.setThrName(rs.getString(2));
+
+				System.out.println("‚¢‚ê‚é‚Ü‚¦"+rs.getInt(1));
+				System.out.println("‚¢‚ê‚½‚ ‚Æ"+tb.getThrId());
+
+				System.out.println("‚¢‚ê‚é‚Ü‚¦"+rs.getString(2));
+				System.out.println("‚¢‚ê‚½‚ ‚Æ"+tb.getThrName());
+
 
 				threadBean.add(tb);
 

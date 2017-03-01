@@ -28,8 +28,8 @@ public class MainServlet extends HttpServlet{
         MainExecute mainExecute = new MainExecute();
 
 		//jspから送られた要素をBeanのセッターで値を格納。
-		threadBean.setThName(req.getParameter("name"));
-		threadBean.setThCreateUser(req.getParameter("user"));
+		threadBean.setThrName(req.getParameter("name"));
+		threadBean.setThrCreateUser(req.getParameter("user"));
 		//String型の変数を生成
 
 			//セットされたBeanのインスタンスをaddThreadに送る

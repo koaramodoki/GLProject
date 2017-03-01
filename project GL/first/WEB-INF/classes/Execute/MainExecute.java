@@ -14,12 +14,11 @@ public class MainExecute{
 	public void addThread(ThreadBean tb){
 		String sql;
 
-		String ThName = tb.getThName();
-		String ThCreateUser = tb.getThCreateUser();
+		String ThCreateUser = tb.getThrCreateUser();
 		if(ThCreateUser==""){
-			sql="insert into GLThread(ThId,ThName,ThCreateDate) values (rtseq.nextval,'"+ThName+"',sysdate)";
+			sql="insert into GLThread(ThId,ThName,ThCreateDate) values (rtseq.nextval,'"+tb.getThrName()+"',sysdate)";
 		}else{
-			sql="insert into GLThread(ThId,ThName,ThUserName,ThCreateDate) values (rtseq.nextval,'"+ThName+"','"+ThCreateUser+"',sysdate)";
+			sql="insert into GLThread(ThId,ThName,ThUserName,ThCreateDate) values (rtseq.nextval,'"+tb.getThrName()+"','"+tb.getThrCreateUser()+"',sysdate)";
 		}
 
 		dba.write(sql);

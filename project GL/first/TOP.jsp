@@ -5,7 +5,7 @@
 	<title>TOP</title>
 </head>
 	<body>
-		<h1>‚â‚Ü‚¾</h1>
+		<h1>‘è–¼</h1>
 		<form method='get' action='MainServlet'>
 			<input type="submit" value="ŒfŽ¦”Â‚ðŽn‚ß‚éI">
 		</form>
