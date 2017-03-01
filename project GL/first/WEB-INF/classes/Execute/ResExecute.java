@@ -21,4 +21,10 @@ public class ResExecute{
 
 		dba.write(sql);
 	}
+	public ArrayList getRes(String _id){
+		String id = _id;
+
+		return dba.resRead(id);
+
+	}
 }

@@ -36,9 +36,10 @@ public class DBAccess{
 		}
 
 	}
-	public ArrayList resRead(){
+	public ArrayList resRead(String id){
 		try{
-			String sql="SELECT resId,UserName,CreateDate,Content FROM ResTest ORDER BY CreateDate DESC";
+			System.out.println("resRead‚Ìƒƒ\ƒbƒh‚Å‚·"+id);
+			String sql="SELECT resId,UserName,CreateDate,Content FROM ResTest where thrId = '"+id+"' ORDER BY CreateDate DESC";
 
 			getConnection();
 

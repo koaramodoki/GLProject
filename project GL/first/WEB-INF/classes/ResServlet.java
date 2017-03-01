@@ -21,6 +21,7 @@ public class ResServlet extends HttpServlet{
 
 		//送られてきた値をResBeanにセット
 		ResBean rb = new ResBean();
+		String id = req.getParameter("id");
 		rb.setResUserName(req.getParameter("User"));
 		rb.setResContent(req.getParameter("Content"));
 
@@ -29,11 +30,11 @@ public class ResServlet extends HttpServlet{
 		rx.addRes(rb);
 
 		DBAccess dba = new DBAccess();
-		ArrayList<ResBean> users = dba.resRead();
+		ArrayList<ResBean> users = dba.resRead(id);
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
-
+		req.setAttribute("id",rx.getRes(id));
 		req.setAttribute("users",users);
 
 		//RequestDispatcherインターフェイスを実装するクラスの
@@ -44,21 +45,22 @@ public class ResServlet extends HttpServlet{
 
 		//上で設定した宛先にreqとresを転送する
 		dis.forward(req,res);
-	
+
 	}
 	public void doGet(HttpServletRequest req,HttpServletResponse res)
 	throws ServletException,IOException{
-		
+
 		//文字コード設定
 		req.setCharacterEncoding("Windows-31J");
-		
-		DBAccess dba = new DBAccess();
-		ArrayList<ResBean> users = dba.resRead();
+
+		ResExecute rx = new ResExecute();
+		String id = req.getParameter("id");
+
+
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
-
-		req.setAttribute("users",users);
+		req.setAttribute("id",rx.getRes(id));
 
 		//RequestDispatcherインターフェイスを実装するクラスの
 		//インスタンスを取得する
@@ -68,6 +70,6 @@ public class ResServlet extends HttpServlet{
 
 		//上で設定した宛先にreqとresを転送する
 		dis.forward(req,res);
-		
+
 	}
 }

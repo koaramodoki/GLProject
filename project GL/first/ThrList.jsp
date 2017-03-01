@@ -15,7 +15,7 @@
 <header>
 	<form id="hd">
 		<input type="submit" value="更新">
-		<input type="text" style="display: none">	
+		<input type="text" style="display: none">
 	</form>
 	<button id="button" id="hd">
 		<a class="fa fa-bars">スレッド作成</a>
@@ -45,9 +45,9 @@
 		<div id="thr_update">作成日</div>
 		<div id="thr_count" align="center">レス数</div>
 	</div>
-		<hr>
+		<hr> 
 	<c:forEach var="thr" items="${users}">
-	<div id="thr"><a href="https://www.google.co.jp">
+	<div id="thr"><a href="ResServlet?id=${thr.thrId}">
 		<div id="thr_id" align="center">${thr.thrId}</div>
 		<div id="thr_name">${thr.thrName}</div>
 		<div id="thr_create_user">${thr.thrCreateUser}</div>
