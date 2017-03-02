@@ -42,10 +42,10 @@ public class ResBean{
 		this.resStamp=resStamp;
 	}
 	//================================================
-		public String getThrId(){
-			return thrId;
-		}
-		public void setThrId(String _thrId){
-			this.thrId = _thrId;
-		}
+	public String getThrId(){
+		return thrId;
+	}
+	public void setThrId(String _thrId){
+		this.thrId = _thrId;
+	}
 }

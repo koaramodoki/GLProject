@@ -47,6 +47,8 @@ public class DBAccess{
 
 			ResultSet rs=st.executeQuery(sql);
 
+			System.out.println("(・ω・`)");
+			
 			while(rs.next()){
 				ResBean rb = new ResBean();
 
@@ -56,6 +58,13 @@ public class DBAccess{
 				rb.setResCreateDate(rs.getString(4));
 				rb.setResContent(rs.getString(5));
 
+				System.out.println("(´・ω・`)");
+				System.out.println(rb.getThrId());
+				System.out.println(rb.getResId());
+				System.out.println(rb.getResUserName());
+				System.out.println(rb.getResCreateDate());
+				System.out.println(rb.getResContent());
+				
 				resBean.add(rb);
 			}
 			System.out.println("リストに追加したよ。");

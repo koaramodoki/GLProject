@@ -38,7 +38,7 @@
 					<input type="checkbox" name="stamp" value="3">
 					<input type="checkbox" name="stamp" value="4">
 					<input type="checkbox" name="stamp" value="5">
-					<input type="hidden" name="id" value="${users.thrId}">
+					
 				</td></tr>
 				<tr><td align="right" colspan="2"><input type="submit" value="‘—M "></td></tr>
 				<form>
@@ -48,7 +48,7 @@
 </nav>
 <br><br><br>
 
-		<c:forEach var="user" items="${users}">
+		<c:forEach var="user" items="${id}">
 			<table id="res">
 				<tr><td><xmp>${user.resId}:${user.resUserName}</xmp></td></tr>
 				<tr><td id="res_content" colspan="2"><xmp>${user.resContent}</xmp></td></tr>
