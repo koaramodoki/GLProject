@@ -46,8 +46,6 @@ public class DBAccess{
 			Statement st=cn.createStatement();
 
 			ResultSet rs=st.executeQuery(sql);
-
-			System.out.println("(・ω・`)");
 			
 			while(rs.next()){
 				ResBean rb = new ResBean();
@@ -57,13 +55,6 @@ public class DBAccess{
 				rb.setResUserName(rs.getString(3));
 				rb.setResCreateDate(rs.getString(4));
 				rb.setResContent(rs.getString(5));
-
-				System.out.println("(´・ω・`)");
-				System.out.println(rb.getThrId());
-				System.out.println(rb.getResId());
-				System.out.println(rb.getResUserName());
-				System.out.println(rb.getResCreateDate());
-				System.out.println(rb.getResContent());
 				
 				resBean.add(rb);
 			}
@@ -136,6 +127,42 @@ public class DBAccess{
 
 			int result = st.executeUpdate(sql);
 			System.out.println(result+"件insertしたよ。");
+
+			cn.commit();
+
+			st.close();
+
+			cn.close();
+
+		}catch(SQLException e){
+			e.printStackTrace();
+			System.out.println("接続失敗");
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.println("接続失敗");
+		}
+	}
+	public void seqCreate(){
+	try{
+			ThreadBean tb = new ThreadBean();
+		
+			String curr = "select threadsequence.currval from dual";
+			
+			getConnection();
+			
+			Statement st=cn.createStatement();
+			
+			ResultSet rs=st.executeQuery(curr);
+
+			tb.setThrId(rs.getString(1));
+			
+			String seq = "create sequence ResSequence"+tb.getThrId()+" maxvalue 9999";
+			
+			System.out.println(seq);
+			
+			
+			int result = st.executeUpdate(seq);
+			System.out.println("ResSequence"+seq+"を作成しました。");
 
 			cn.commit();
 

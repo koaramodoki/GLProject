@@ -13,6 +13,8 @@ public class MainExecute{
 
 	public void addThread(ThreadBean tb){
 		String sql;
+		
+		String seq = "create sequence ResSequence"
 
 		String ThrCreateUser = tb.getThrCreateUser();
 		if(ThrCreateUser==""){
@@ -20,14 +22,13 @@ public class MainExecute{
 		}else{
 			sql="insert into GLThread(ThrId,ThrName,UserName,CreateDate) values (threadsequence.nextval,'"+tb.getThrName()+"','"+tb.getThrCreateUser()+"',sysdate)";
 		}
-
+		
 		dba.write(sql);
+		dba.seqCreate();
 	}
 	public ArrayList getThread(){
 		ArrayList al = new ArrayList();
 		al = dba.ThreadRead();
 		return al;
 	}
-
-
 }
