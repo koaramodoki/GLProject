@@ -79,7 +79,7 @@ public class DBAccess{
 
 	public ArrayList ThreadRead(){
 		try{
-			String sql="SELECT ThrId,ThrName,CreateDate FROM GLThread ORDER BY ThrId DESC";
+			String sql="SELECT ThrId,ThrName,UserName,CreateDate FROM GLThread ORDER BY ThrId DESC";
 
 			getConnection();
 
@@ -95,7 +95,12 @@ public class DBAccess{
 
 				tb.setThrName(rs.getString(2));
 
-				tb.setThrCreateDate(rs.getString(3));
+				tb.setThrCreateUser(rs.getString(3));
+
+				tb.setThrCreateDate(rs.getString(4));
+
+
+
 
 				threadBean.add(tb);
 

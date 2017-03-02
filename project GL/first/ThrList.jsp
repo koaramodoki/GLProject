@@ -27,7 +27,7 @@
  	<div>
 		<form method='post' action='MainServlet'>
 			<table>
-				<tr><td>名前:</td><td><input type="text" name="User" id="thr_user"></td></tr>
+				<tr><td>名前:</td><td><input type="text" name="user" id="thr_user"></td></tr>
 				<tr><td>スレッド名:</td><td><input type="text" name="name" id="thr_name"></td></tr>
 				<tr><td align="right" colspan="2"><input type="submit" value="作成 "></td></tr>
 			</table>
@@ -45,7 +45,7 @@
 		<div id="thr_update">作成日</div>
 		<div id="thr_count" align="center">レス数</div>
 	</div>
-		<hr> 
+		<hr>
 	<c:forEach var="thr" items="${users}">
 	<div id="thr"><a href="ResServlet?id=${thr.thrId}">
 		<div id="thr_id" align="center">${thr.thrId}</div>
