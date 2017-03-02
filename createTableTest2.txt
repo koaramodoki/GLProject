@@ -18,3 +18,19 @@ create table GLRes(
 	ResCreateDate Date);
 
 insert into GLThread values(ThreadSequence.nextval,'ななしちゃん',Sysdate);
+
+3/2
+Create table GLRes(
+	ResId Number(7),
+	ThrId varchar2(50),
+	UserName Varchar2(40) Default 'ななしのなっちゃん',
+	CreateDate Date Not null,
+	Content Varchar2(4000) Not null,
+	primary key(ResId,ThId)) ;
+
+スレッドテーブル作成（テスト）
+Create table GLThread(
+	ThrId varchar2(50) Primary key,
+	UserName Varchar2(40) Default 'ななしのなっちゃん',
+	ThrName Varchar2(40),
+	CreateDate Date);
