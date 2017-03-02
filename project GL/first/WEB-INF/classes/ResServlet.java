@@ -22,6 +22,7 @@ public class ResServlet extends HttpServlet{
 		//送られてきた値をResBeanにセット
 		ResBean rb = new ResBean();
 		String id = req.getParameter("id");
+		System.out.println("あああ"+rb.getThrId());
 		rb.setThrId(id);
 		rb.setResUserName(req.getParameter("User"));
 		rb.setResContent(req.getParameter("Content"));
@@ -30,13 +31,10 @@ public class ResServlet extends HttpServlet{
 		ResExecute rx = new ResExecute();
 		rx.addRes(rb);
 
-		DBAccess dba = new DBAccess();
-		ArrayList<ResBean> users = dba.resRead(id);
-
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
+		req.setAttribute("thrId",id);
 		req.setAttribute("id",rx.getRes(id));
-		req.setAttribute("users",users);
 
 		//RequestDispatcherインターフェイスを実装するクラスの
 		//インスタンスを取得する
@@ -61,6 +59,7 @@ public class ResServlet extends HttpServlet{
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
+		req.setAttribute("thrId",id);
 		req.setAttribute("id",rx.getRes(id));
 
 		//RequestDispatcherインターフェイスを実装するクラスの
