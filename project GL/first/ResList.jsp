@@ -14,7 +14,7 @@
 <body>
 <div class="layer"></div>
 <header>
-	<form method='get' action='MainServlet' id=button>
+	<form method='get' action='MainServlet' id="hd">
 		<input type="submit" value="TOP‚Ö–ß‚é">	
 	</form>
 	<button id="button" id="hd">
