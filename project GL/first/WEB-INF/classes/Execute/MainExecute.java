@@ -13,18 +13,20 @@ public class MainExecute{
 
 	public void addThread(ThreadBean tb){
 		String sql;
-		
-		String seq = "create sequence ResSequence"
 
+		dba.seqCreate();
+		
 		String ThrCreateUser = tb.getThrCreateUser();
 		if(ThrCreateUser==""){
+			//ここでシーケンス作成
 			sql="insert into GLThread(ThrId,ThrName,CreateDate) values (threadsequence.nextval,'"+tb.getThrName()+"',sysdate)";
 		}else{
 			sql="insert into GLThread(ThrId,ThrName,UserName,CreateDate) values (threadsequence.nextval,'"+tb.getThrName()+"','"+tb.getThrCreateUser()+"',sysdate)";
 		}
-		
+
+
 		dba.write(sql);
-		dba.seqCreate();
+
 	}
 	public ArrayList getThread(){
 		ArrayList al = new ArrayList();

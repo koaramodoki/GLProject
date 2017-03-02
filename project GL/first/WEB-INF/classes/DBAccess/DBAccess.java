@@ -46,16 +46,16 @@ public class DBAccess{
 			Statement st=cn.createStatement();
 
 			ResultSet rs=st.executeQuery(sql);
-			
+
 			while(rs.next()){
 				ResBean rb = new ResBean();
 
 				rb.setThrId(rs.getString(1));
-				rb.setResId(rs.getInt(2));				
+				rb.setResId(rs.getInt(2));
 				rb.setResUserName(rs.getString(3));
 				rb.setResCreateDate(rs.getString(4));
 				rb.setResContent(rs.getString(5));
-				
+
 				resBean.add(rb);
 			}
 			System.out.println("リストに追加したよ。");
@@ -94,7 +94,7 @@ public class DBAccess{
 				tb.setThrId(rs.getString(1));
 
 				tb.setThrName(rs.getString(2));
-				
+
 				tb.setThrCreateDate(rs.getString(3));
 
 				threadBean.add(tb);
@@ -144,23 +144,26 @@ public class DBAccess{
 	}
 	public void seqCreate(){
 	try{
+
 			ThreadBean tb = new ThreadBean();
-		
-			String curr = "select threadsequence.currval from dual";
-			
+
+			String curr = "Select Max(ThrId) from GLthread";
+
 			getConnection();
-			
+
 			Statement st=cn.createStatement();
-			
+
 			ResultSet rs=st.executeQuery(curr);
 
+			rs.next();
+
 			tb.setThrId(rs.getString(1));
-			
+
 			String seq = "create sequence ResSequence"+tb.getThrId()+" maxvalue 9999";
-			
+
 			System.out.println(seq);
-			
-			
+
+
 			int result = st.executeUpdate(seq);
 			System.out.println("ResSequence"+seq+"を作成しました。");
 
