@@ -14,9 +14,8 @@
 <body>
 <div class="layer"></div>
 <header>
-	<form id="hd">
-		<input type="submit" value="çXêV">
-		<input type="text" style="display: none">	
+	<form method='get' action='MainServlet' id=button>
+		<input type="submit" value="TOPÇ÷ñﬂÇÈ">	
 	</form>
 	<button id="button" id="hd">
 		<a class="fa fa-bars">ìäçe</a>
