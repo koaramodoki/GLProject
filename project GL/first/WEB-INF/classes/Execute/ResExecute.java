@@ -6,6 +6,7 @@ import DBAccess.DBAccess;
 import java.util.ArrayList;
 
 public class ResExecute{
+	String id = null;
 
 	DBAccess dba = new DBAccess();
 
@@ -22,7 +23,7 @@ public class ResExecute{
 		dba.write(sql);
 	}
 	public ArrayList getRes(String _id){
-		String id = _id;
+		this.id = _id;
 
 		return dba.resRead(id);
 

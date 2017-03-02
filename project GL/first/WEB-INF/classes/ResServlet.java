@@ -24,6 +24,7 @@ public class ResServlet extends HttpServlet{
 		String id = req.getParameter("id");
 		rb.setResUserName(req.getParameter("User"));
 		rb.setResContent(req.getParameter("Content"));
+		rb.setThrId(id);
 
 		//ResBean‚ğˆø”‚ÉaddRes‚ğÀs
 		ResExecute rx = new ResExecute();
