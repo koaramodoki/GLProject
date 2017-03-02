@@ -2,7 +2,7 @@ package Bean;
 
 public class ThreadBean{
 
-		private int thrId;
+		private String thrId;
 		private String thrName;
 		private String thrCreateUser;
 		private String thrCreateDate;
@@ -13,10 +13,10 @@ public class ThreadBean{
 
 
 //================================================
-		public int getThrId(){
+		public String getThrId(){
 			return thrId;
 		}
-		public void setThrId(int _thrId){
+		public void setThrId(String _thrId){
 			this.thrId = _thrId;
 		}
 //=================================================

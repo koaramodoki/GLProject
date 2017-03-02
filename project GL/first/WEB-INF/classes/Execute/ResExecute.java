@@ -6,7 +6,6 @@ import DBAccess.DBAccess;
 import java.util.ArrayList;
 
 public class ResExecute{
-	String id = null;
 
 	DBAccess dba = new DBAccess();
 
@@ -14,16 +13,18 @@ public class ResExecute{
 		String sql;
 
 		String resUserName = rb.getResUserName();
+		System.out.println("¡‚©‚çƒŒƒX‚Ì‘}“ü‚·‚é‚æ"+rb.getThrId());
 		if(resUserName==""){
-			sql="insert into ResTest(resId,CreateDate,Content) values (rtseq.nextval,sysdate,'"+rb.getResContent()+"')";
+			sql="insert into GLRes(thrId,resId,CreateDate,Content) values ('"+rb.getThrId()+"',ressequence.nextval,sysdate,'"+rb.getResContent()+"')";
 		}else{
-			sql="insert into ResTest(resId,UserName,CreateDate,Content) values (rtseq.nextval,'"+resUserName+"',sysdate,'"+rb.getResContent()+"')";
+			sql="insert into GLRes(thrId,resId,UserName,CreateDate,Content) values ('"+rb.getThrId()+"',ressequence.nextval,'"+resUserName+"',sysdate,'"+rb.getResContent()+"')";
 		}
+		System.out.println("¡‚©‚çƒŒƒX‚Ì‘}“ü‚µ‚½‚æ");
 
 		dba.write(sql);
 	}
 	public ArrayList getRes(String _id){
-		this.id = _id;
+		String id = _id;
 
 		return dba.resRead(id);
 

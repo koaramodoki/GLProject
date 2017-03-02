@@ -22,9 +22,9 @@ public class ResServlet extends HttpServlet{
 		//送られてきた値をResBeanにセット
 		ResBean rb = new ResBean();
 		String id = req.getParameter("id");
+		rb.setThrId(id);
 		rb.setResUserName(req.getParameter("User"));
 		rb.setResContent(req.getParameter("Content"));
-		rb.setThrId(id);
 
 		//ResBeanを引数にaddResを実行
 		ResExecute rx = new ResExecute();

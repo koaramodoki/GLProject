@@ -39,7 +39,7 @@ public class DBAccess{
 	public ArrayList resRead(String id){
 		try{
 			System.out.println("resReadÇÃÉÅÉ\ÉbÉhÇ≈Ç∑"+id);
-			String sql="SELECT resId,UserName,CreateDate,Content FROM ResTest where thrId = '"+id+"' ORDER BY CreateDate DESC";
+			String sql="SELECT thrId,resId,UserName,CreateDate,Content FROM GLRes where thrId = '"+id+"' ORDER BY CreateDate DESC";
 
 			getConnection();
 
@@ -50,10 +50,11 @@ public class DBAccess{
 			while(rs.next()){
 				ResBean rb = new ResBean();
 
-				rb.setResId(rs.getInt(1));
-				rb.setResUserName(rs.getString(2));
-				rb.setResCreateDate(rs.getString(3));
-				rb.setResContent(rs.getString(4));
+				rb.setThrId(rs.getString(1));
+				rb.setResId(rs.getInt(2));				
+				rb.setResUserName(rs.getString(3));
+				rb.setResCreateDate(rs.getString(4));
+				rb.setResContent(rs.getString(5));
 
 				resBean.add(rb);
 			}
@@ -78,7 +79,7 @@ public class DBAccess{
 
 	public ArrayList ThreadRead(){
 		try{
-			String sql="SELECT ThId,ThName FROM GLThread ORDER BY ThId DESC";
+			String sql="SELECT ThrId,ThrName,CreateDate FROM GLThread ORDER BY ThrId DESC";
 
 			getConnection();
 
@@ -90,16 +91,11 @@ public class DBAccess{
 
 				ThreadBean tb = new ThreadBean();
 
-				tb.setThrId(rs.getInt(1));
+				tb.setThrId(rs.getString(1));
 
 				tb.setThrName(rs.getString(2));
-
-				System.out.println("Ç¢ÇÍÇÈÇ‹Ç¶"+rs.getInt(1));
-				System.out.println("Ç¢ÇÍÇΩÇ†Ç∆"+tb.getThrId());
-
-				System.out.println("Ç¢ÇÍÇÈÇ‹Ç¶"+rs.getString(2));
-				System.out.println("Ç¢ÇÍÇΩÇ†Ç∆"+tb.getThrName());
-
+				
+				tb.setThrCreateDate(rs.getString(3));
 
 				threadBean.add(tb);
 

@@ -1,8 +1,8 @@
 package Bean;
 
 public class ResBean{
-	private int resId;
 	private String thrId;
+	private int resId;
 	private String resUserName;
 	private String resCreateDate;
 	private String resContent;
@@ -10,9 +10,6 @@ public class ResBean{
 
 	public ResBean(){}
 
-	public String getThrId(){
-		return thrId;
-	}
 	public int getResId(){
 		return resId;
 	}
@@ -29,9 +26,6 @@ public class ResBean{
 		return resStamp;
 	}
 
-	public void setThrId(String thrId){
-		this.thrId = thrId;
-	}
 	public void setResId(int resId){
 		this.resId=resId;
 	}
@@ -47,4 +41,11 @@ public class ResBean{
 	public void setResStamp(int resStamp){
 		this.resStamp=resStamp;
 	}
+	//================================================
+		public String getThrId(){
+			return thrId;
+		}
+		public void setThrId(String _thrId){
+			this.thrId = _thrId;
+		}
 }
