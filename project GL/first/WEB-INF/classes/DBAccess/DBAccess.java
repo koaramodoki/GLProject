@@ -79,7 +79,7 @@ public class DBAccess{
 
 	public ArrayList ThreadRead(){
 		try{
-			String sql="SELECT ThrId,ThrName,UserName,CreateDate,(Select count(ResId) from GLRes where thrId = GLThread.thrid) FROM GLThread ORDER BY ThrId DESC";
+			String sql="SELECT ThrId,ThrName,UserName,CreateDate,(Select count(ResId) from GLRes where thrId = GLThread.thrid),(Select max(createdate) from GLRes where thrId = GLThread.thrid) FROM GLThread ORDER BY ThrId DESC";
 
 			getConnection();
 
@@ -101,6 +101,7 @@ public class DBAccess{
 
 				tb.setResCount(rs.getString(5));
 
+				tb.setUpdateDate(rs.getString(6));
 
 
 				threadBean.add(tb);

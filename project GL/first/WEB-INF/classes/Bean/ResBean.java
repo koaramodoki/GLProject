@@ -7,6 +7,7 @@ public class ResBean{
 	private String resUserName;
 	private String resCreateDate;
 	private String resContent;
+
 	private int resStamp;
 
 	public ResBean(){}
@@ -30,6 +31,8 @@ public class ResBean{
 		return thrName;
 	}
 
+
+
 	public void setResId(int resId){
 		this.resId=resId;
 	}
@@ -48,6 +51,8 @@ public class ResBean{
 	public void setThrName(String thrName){
 		this.thrName = thrName;
 	}
+	
+
 	//================================================
 	public String getThrId(){
 		return thrId;
