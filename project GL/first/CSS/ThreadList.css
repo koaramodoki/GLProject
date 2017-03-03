@@ -62,11 +62,9 @@
 		height:80px;
 	}
 	#hd{
-		float: left;
+		float:right;
 	}
-	#hd_2{
-		float: right;
-	}
+	
 .layer{
     position: fixed;
     top: 0;
