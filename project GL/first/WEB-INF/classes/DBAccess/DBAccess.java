@@ -39,8 +39,7 @@ public class DBAccess{
 	public ArrayList resRead(String id){
 		try{
 			System.out.println("resReadÇÃÉÅÉ\ÉbÉhÇ≈Ç∑"+id);
-			String sql="SELECT thrId,resId,UserName,CreateDate,Content FROM GLRes where thrId = '"+id+"' ORDER BY CreateDate DESC";
-
+			String sql="SELECT thrId,resId,UserName,CreateDate,Content,(Select ThrName FROM GLThread where thrid = '"+id+"') From GLRes where thrId = '"+id+"' ORDER BY CreateDate DESC";
 			getConnection();
 
 			Statement st=cn.createStatement();
@@ -55,6 +54,7 @@ public class DBAccess{
 				rb.setResUserName(rs.getString(3));
 				rb.setResCreateDate(rs.getString(4));
 				rb.setResContent(rs.getString(5));
+				rb.setThrName(rs.getString(6));
 
 				resBean.add(rb);
 			}
@@ -79,7 +79,7 @@ public class DBAccess{
 
 	public ArrayList ThreadRead(){
 		try{
-			String sql="SELECT ThrId,ThrName,UserName,CreateDate FROM GLThread ORDER BY ThrId DESC";
+			String sql="SELECT ThrId,ThrName,UserName,CreateDate,(Select count(ResId) from GLRes where thrId = GLThread.thrid) FROM GLThread ORDER BY ThrId DESC";
 
 			getConnection();
 
@@ -99,6 +99,7 @@ public class DBAccess{
 
 				tb.setThrCreateDate(rs.getString(4));
 
+				tb.setResCount(rs.getString(5));
 
 
 

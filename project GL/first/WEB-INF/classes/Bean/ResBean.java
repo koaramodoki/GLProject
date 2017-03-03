@@ -2,6 +2,7 @@ package Bean;
 
 public class ResBean{
 	private String thrId;
+	private String thrName;
 	private int resId;
 	private String resUserName;
 	private String resCreateDate;
@@ -25,6 +26,9 @@ public class ResBean{
 	public int getResStamp(){
 		return resStamp;
 	}
+	public String getThrName(){
+		return thrName;
+	}
 
 	public void setResId(int resId){
 		this.resId=resId;
@@ -40,6 +44,9 @@ public class ResBean{
 	}
 	public void setResStamp(int resStamp){
 		this.resStamp=resStamp;
+	}
+	public void setThrName(String thrName){
+		this.thrName = thrName;
 	}
 	//================================================
 	public String getThrId(){

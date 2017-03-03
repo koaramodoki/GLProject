@@ -6,7 +6,7 @@ public class ThreadBean{
 		private String thrName;
 		private String thrCreateUser;
 		private String thrCreateDate;
-		private int resCount;
+		private String resCount;
 		private ResBean resBean;
 
 		public ThreadBean(){}
@@ -41,10 +41,10 @@ public class ThreadBean{
 			this.thrCreateDate = _CreateDate;
 		}
 //===================================================
-		public int getResCount(){
+		public String getResCount(){
 			return resCount;
 		}
-		public void setResCount(int _resCount){
+		public void setResCount(String _resCount){
 			this.resCount = _resCount;
 		}
 //===================================================
