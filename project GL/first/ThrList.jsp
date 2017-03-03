@@ -20,10 +20,6 @@
 	<button id="button" id="hd">
 		<a class="fa fa-bars">スレッド作成</a>
 	</button>
-		<button id="hd_2">
-		<a href="Test.html">ヘルプ</a>
-	</button>
-
 </header>
 <!-- スライドメニュー部分-->
 <nav id="slide_menu">
@@ -46,6 +42,7 @@
 		<div id="thr_name">スレッド名</div>
 		<div id="thr_create_user">作成者</div>
 		<div id="thr_create_date">作成日</div>
+		<div id="thr_update">更新日</div>
 		<div id="thr_count" align="center">レス数</div>
 	</div>
 		<hr>
@@ -54,7 +51,8 @@
 		<div id="thr_id" align="center">${thr.thrId}</div>
 		<div id="thr_name">${thr.thrName}</div>
 		<div id="thr_create_user">${thr.thrCreateUser}</div>
-		<div id="thr_update">${thr.thrCreateDate}</div>
+		<div id="thr_create_date">${thr.thrCreateDate}</div>
+		<div id="thr_update">${thr.updateDate}</div>
 		<div id="thr_count" align="center">${thr.resCount}</div>
 	</a></div>
 	<hr>

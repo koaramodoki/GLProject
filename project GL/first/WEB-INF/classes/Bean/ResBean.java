@@ -51,7 +51,7 @@ public class ResBean{
 	public void setThrName(String thrName){
 		this.thrName = thrName;
 	}
-	
+
 
 	//================================================
 	public String getThrId(){
