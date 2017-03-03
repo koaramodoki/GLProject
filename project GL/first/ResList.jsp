@@ -50,7 +50,8 @@
 </nav>
 <br><br><br>
 
-		<h1>${thrId}:${id.thrName}</h1>
+
+			<h1>${thrId}:${thrName}</h1>
 		<hr>
 
 		<c:forEach var="user" items="${id}">
