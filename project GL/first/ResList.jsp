@@ -15,7 +15,7 @@
 <div class="layer"></div>
 <header>
 	<form method='get' action='MainServlet' id="hd">
-		<input type="submit" value="TOPÇ÷ñﬂÇÈ">	
+		<input type="submit" value="TOPÇ÷ñﬂÇÈ">
 	</form>
 	<button id="button" id="hd">
 		<a class="fa fa-bars">ìäçe</a>
@@ -49,8 +49,8 @@
 	</div>
 </nav>
 <br><br><br>
-		
-		<h1>${thrId}:${thrName}</h1>
+
+		<h1>${thrId}:${id.thrName}</h1>
 		<hr>
 
 		<c:forEach var="user" items="${id}">
