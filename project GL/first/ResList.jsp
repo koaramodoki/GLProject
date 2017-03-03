@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ƒŒƒXˆê——</title>
+	<title>${thrName}</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</script>
 <link rel="stylesheet" type="text/css" href="CSS/ResList.css">
@@ -46,6 +46,9 @@
 	</div>
 </nav>
 <br><br><br>
+		
+		<h1>${thrId}:${thrName}</h1>
+		<hr>
 
 		<c:forEach var="user" items="${id}">
 			<table id="res">
