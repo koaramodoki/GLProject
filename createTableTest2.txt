@@ -32,5 +32,5 @@ Create table GLRes(
 Create table GLThread(
 	ThrId varchar2(50) Primary key,
 	UserName Varchar2(40) Default '‚È‚È‚µ‚Ì‚È‚Á‚¿‚á‚ñ',
-	ThrName Varchar2(40),
+	ThrName Varchar2(40) Default '–³‘è',
 	CreateDate Date);
