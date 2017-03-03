@@ -1,6 +1,9 @@
 import Bean.ResBean;
 import DBAccess.DBAccess;
 import Execute.ResExecute;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.net.URLDecoder;
 
 import java.util.ArrayList;
 
@@ -18,27 +21,30 @@ public class ResServlet extends HttpServlet{
 
 		//文字コード設定
 		req.setCharacterEncoding("Windows-31J");
+		res.setContentType("text/html; charset=Windows-31J");
 
+		ResExecute rx = new ResExecute();
 		//送られてきた値をResBeanにセット
 		ResBean rb = new ResBean();
 		String id = req.getParameter("id");
+		//String thrName = rx.gtn();
+		String thrName = req.getParameter("thrName");
+		//String thrName = new String(URLDecoder.decode(req.getParameter("thrName"), "iso-8859-1").getBytes("iso-8859-1"),"Windows-31J");
+		System.out.println("thrNameゲットだぜ"+thrName);
 		rb.setThrId(id);
+		rb.setThrName(thrName);
 		rb.setResUserName(req.getParameter("User"));
 		rb.setResContent(req.getParameter("Content"));
 
 		//ResBeanを引数にaddResを実行
-		ResExecute rx = new ResExecute();
 		rx.addRes(rb);
-
-		ArrayList<ResBean> li = rx.getRes(id);
-		System.out.println("スレッドねーむ"+li.getThrName());
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
+		req.setAttribute("thrName",thrName);
 		req.setAttribute("thrId",id);
 		req.setAttribute("id",rx.getRes(id));
 
-		req.setAttribute("thrName",li.getThrName());
 		//RequestDispatcherインターフェイスを実装するクラスの
 		//インスタンスを取得する
 		//引数は転送先のURL
@@ -54,14 +60,19 @@ public class ResServlet extends HttpServlet{
 
 		//文字コード設定
 		req.setCharacterEncoding("Windows-31J");
+		res.setContentType("text/html; charset=Windows-31J");
 
 		ResExecute rx = new ResExecute();
 		String id = req.getParameter("id");
-
+		//String thrName = req.getParameter("thrName");
+		//String thrName = new String (req.getParameter("thrName").getBytes("ISO-8859-1"));
+		String thrName = new String(URLDecoder.decode(req.getParameter("thrName"), "iso-8859-1").getBytes("iso-8859-1"),"Windows-31J");
 
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
+
+		req.setAttribute("thrName",thrName);
 		req.setAttribute("thrId",id);
 		req.setAttribute("id",rx.getRes(id));
 

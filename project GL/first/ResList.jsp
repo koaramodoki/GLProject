@@ -41,6 +41,7 @@
 					<input type="checkbox" name="stamp" value="4">
 					<input type="checkbox" name="stamp" value="5">
 					<input type="hidden" name="id" value="${thrId}">
+					<input type="hidden" name="thrName" value="${thrName}"
 				</td></tr>
 				<tr><td align="right" colspan="2"><input type="submit" value="‘—M "></td></tr>
 				<form>

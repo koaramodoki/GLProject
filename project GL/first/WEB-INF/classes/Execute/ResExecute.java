@@ -13,7 +13,7 @@ public class ResExecute{
 		String sql;
 
 		String resUserName = rb.getResUserName();
-		System.out.println("¡‚©‚çƒŒƒX‚Ì‘}“ü‚·‚é‚æ"+rb.getThrId());
+		System.out.println("¡‚©‚çƒŒƒX‚Ì‘}“ü‚·‚é‚æ"+rb.getThrName());
 		if(resUserName==""){
 			sql="insert into GLRes(thrId,resId,CreateDate,Content) values ('"+rb.getThrId()+"',ressequence"+rb.getThrId()+".nextval,sysdate,'"+rb.getResContent()+"')";
 		}else{
@@ -23,10 +23,10 @@ public class ResExecute{
 
 		dba.write(sql);
 	}
+
 	public ArrayList getRes(String _id){
 		String id = _id;
 
 		return dba.resRead(id);
-
 	}
 }
