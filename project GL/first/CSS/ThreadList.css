@@ -64,6 +64,9 @@
 	#hd{
 		float: left;
 	}
+	#hd_2{
+		float: right;
+	}
 .layer{
     position: fixed;
     top: 0;

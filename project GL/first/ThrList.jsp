@@ -20,6 +20,10 @@
 	<button id="button" id="hd">
 		<a class="fa fa-bars">スレッド作成</a>
 	</button>
+		<button id="hd_2">
+		<a href="Test.html">ヘルプ</a>
+	</button>
+<
 </header>
 <!-- スライドメニュー部分-->
 <nav id="slide_menu">

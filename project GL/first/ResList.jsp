@@ -20,6 +20,9 @@
 	<button id="button" id="hd">
 		<a class="fa fa-bars">“Še</a>
 	</button>
+	<button id="hd_2">
+		<a href="Test.html">ƒwƒ‹ƒv</a>
+	</button>
 </header>
 <nav id="slide_menu">
 	<br><br>
