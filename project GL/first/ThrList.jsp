@@ -50,7 +50,9 @@
 		<div id="thr_update">XV“ú</div>
 		<div id="thr_count" align="center">ƒŒƒX”</div>
 	</div>
+	
 		<hr>
+
 	<c:forEach var="thr" items="${users}">
 	<div id="thr"><a href="ResServlet?id=${thr.thrId}&thrName=${thr.thrName}">
 		<div id="thr_id" align="center">${thr.thrId}</div>
