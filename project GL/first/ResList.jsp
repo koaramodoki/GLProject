@@ -33,16 +33,9 @@
 				<tr><td colspan="2">ìäçeì‡óe</td></tr>
 				<tr><td colspan="2">
 					<textarea id="textbox" type='text' name='Content'></textarea>
-				</td></tr>
-<!--				<tr><td>
-					<input type="checkbox" name="stamp" value="1">
-					<input type="checkbox" name="stamp" value="2">
-					<input type="checkbox" name="stamp" value="3">
-					<input type="checkbox" name="stamp" value="4">
-					<input type="checkbox" name="stamp" value="5">
 					<input type="hidden" name="id" value="${thrId}">
-					<input type="hidden" name="thrName" value="${thrName}"
-				</td></tr>-->
+					<input type="hidden" name="thrName" value="${thrName}">
+				</td></tr>
 				<tr><td align="right" colspan="2"><input type="submit" value="ëóêM "></td></tr>
 				<form>
 			</table>
