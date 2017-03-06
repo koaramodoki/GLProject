@@ -1,0 +1,101 @@
+<web-app>
+	
+	<servlet>
+		<servlet-name>testin</servlet-name>
+		<jsp-file>/testin.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>testin</servlet-name>
+		<url-pattern>/testin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>dbatestservlet</servlet-name>
+		<servlet-class>DBATestServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>dbatestservlet</servlet-name>
+		<url-pattern>/dbatestservlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>testout</servlet-name>
+		<jsp-file>/testout.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>testout</servlet-name>
+		<url-pattern>/testout</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>toptestin</servlet-name>
+		<jsp-file>/toptestin.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>toptestin</servlet-name>
+		<url-pattern>/toptestin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>a</servlet-name>
+		<servlet-class>MainServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>a</servlet-name>
+		<url-pattern>/a</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>toptestout</servlet-name>
+		<jsp-file>/toptestout.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>toptestout</servlet-name>
+		<url-pattern>/toptestout</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	<servlet>
+		<servlet-name>seqin</servlet-name>
+		<jsp-file>/seqin.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>seqin</servlet-name>
+		<url-pattern>/seqin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>seqDelete</servlet-name>
+		<servlet-class>SeqDeleteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>seqDelete</servlet-name>
+		<url-pattern>/seqDelete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>seqout</servlet-name>
+		<jsp-file>/seqout.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>seqout</servlet-name>
+		<url-pattern>/seqout</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+</web-app>
