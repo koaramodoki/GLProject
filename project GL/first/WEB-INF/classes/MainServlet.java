@@ -57,8 +57,9 @@ public class MainServlet extends HttpServlet{
 		//文字コード設定
 		req.setCharacterEncoding("Windows-31J");
 
-		DBAccess dba = new DBAccess();
-		ArrayList<ThreadBean> users = dba.ThreadRead();
+		MainExecute rx = new MainExecute();
+
+		ArrayList<ThreadBean> users = rx.getThread();
 
 		//HttpServletRequetの実装クラスのインスタンスに
 		//usersという名前でデータを登録する
