@@ -45,7 +45,7 @@
 <br><br><br>
 
 
-			<h1>${thrId}:${thrName}</h1>
+			<h1><xmp>${thrId}:${thrName}</xmp></h1>
 		<hr>
 
 		<c:forEach var="user" items="${id}">
