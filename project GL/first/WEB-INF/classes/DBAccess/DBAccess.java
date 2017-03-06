@@ -151,7 +151,7 @@ public class DBAccess{
 	}
 	public void seqCreate(){
 	try{
-
+			
 			ThreadBean tb = new ThreadBean();
 
 			String curr = "Select Max(ThrId) from GLthread";
@@ -165,11 +165,19 @@ public class DBAccess{
 			rs.next();
 
 			tb.setThrId(rs.getString(1));
+		
+		String seq;
 
-			String seq = "create sequence ResSequence"+tb.getThrId()+" maxvalue 9999";
-
+		if(tb.getThrId()==null){
+			seq = "create sequence ResSequence1 maxvalue 9999";
+			
 			System.out.println(seq);
 
+		}else{
+			seq = "create sequence ResSequence"+tb.getThrId()+" maxvalue 9999";
+
+			System.out.println(seq);
+		}
 
 			int result = st.executeUpdate(seq);
 			System.out.println("ResSequence"+seq+"ÇçÏê¨ÇµÇ‹ÇµÇΩÅB");

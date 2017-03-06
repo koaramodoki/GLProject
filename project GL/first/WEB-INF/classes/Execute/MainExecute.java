@@ -13,9 +13,7 @@ public class MainExecute{
 
 	public void addThread(ThreadBean tb){
 		String sql;
-
-		dba.seqCreate();
-		
+	
 		String ThrCreateUser = tb.getThrCreateUser();
 		if(ThrCreateUser==""){
 			//ここでシーケンス作成
@@ -26,6 +24,7 @@ public class MainExecute{
 
 
 		dba.write(sql);
+		dba.seqCreate();
 
 	}
 	public ArrayList getThread(){
