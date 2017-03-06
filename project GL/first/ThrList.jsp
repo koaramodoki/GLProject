@@ -34,8 +34,13 @@
 		</form>
 	</div>
 </nav>
+
  <br><br><br>
 
+<div align="center">
+	<h1 id="rogo">‚Ð‚ë‚¿‚á‚ñ‚Ë‚é</h1>
+	<div id="rogo2">- Hirochannel -</div>
+</div>
 
 	<div id=thr_top>
 		<div id="thr_id" align="center">ID</div>
@@ -49,8 +54,8 @@
 	<c:forEach var="thr" items="${users}">
 	<div id="thr"><a href="ResServlet?id=${thr.thrId}&thrName=${thr.thrName}">
 		<div id="thr_id" align="center">${thr.thrId}</div>
-		<div id="thr_name">${thr.thrName}</div>
-		<div id="thr_create_user">${thr.thrCreateUser}</div>
+		<div id="thr_name"><xmp>${thr.thrName}</xmp></div>
+		<div id="thr_create_user"><xmp>${thr.thrCreateUser}</xmp></div>
 		<div id="thr_create_date">${thr.thrCreateDate}</div>
 		<div id="thr_update">${thr.updateDate}</div>
 		<div id="thr_count" align="center">${thr.resCount}</div>
